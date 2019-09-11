@@ -38,16 +38,16 @@ function phoneticLookup(val) {
           result = "Boston";
           break;
       case "charlie" :
-      result "Chicago";
+      result= "Chicago";
       break;
       case "delta":
-         result "Denver"
+         result = "Denver"
          break;
       case "echo":
-         result "Easy";
+         result = "Easy";
          break;
       case "foxtrot":
-         result "Frank";
+         result = "Frank";
     }
    return result;
 }

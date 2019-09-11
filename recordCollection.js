@@ -22,18 +22,29 @@ If valueis empty (""), delete the given propproperty from the album.
 
 var collection = {
    "2548": {
-
+      "album": "fotia moy",
+      "artist": "Xaroulis-Thivaios",
+      "tracks": [
+         "fotia moy",
+         "to kaphleio"
+      ]
    },
    "2468": {
-
+      "album": "Ta tragoydia mia stalia",
+      "artist": "Miltos Pasxalidis",
+      "tracks": [
+         "Ta tragoydia mia stalia",
+         "O Trelos"
+      ]
    },
    "1245":
    {
-
+      "artist": "Xainides",
+      "tracks": []
    },
    "5439": {
-
-   }
+            "album": "Kapote gnoriza mia limni"
+        }
 
 };
 

@@ -133,4 +133,4 @@ var myStorage = {
       }
 }
 
-var gloveBoxContents = undefined;
+var gloveBoxContents = myStorage.car.inside["glove box"];

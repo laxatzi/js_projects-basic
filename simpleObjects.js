@@ -159,3 +159,5 @@ var myPlants = [
       ]
    }
 ]
+
+var secodTree = myPlants[1].list[1];

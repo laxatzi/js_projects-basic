@@ -83,3 +83,25 @@ function checkObj(checkProp) {
    }
    
 }
+
+// JavaScript Object Notation or JSONis a related data interchange format used to store data.
+
+/* Add a new album to the myMusic array. Add artist and title strings,
+ release_year ,number, and a formats array of strings.
+ */
+var myMusic = [
+   {
+     "artist": "Billy Joel",
+      "title": "Piano Man",
+      "release_year": 1973,
+      "formats": [
+         "CD",
+         "LP",
+         "8T"
+
+               ],
+"gold": true
+   },
+   
+
+]

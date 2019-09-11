@@ -51,10 +51,3 @@ var collection = {
 // Keep a copy of the collection for testing
 var collectionCopy   = JSON.parse(JSON.stringify(collection));
 
-// function
-function updateRecords(id, prop, value){
-//code goes here
-   return collection;
-}
-
-

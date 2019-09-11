@@ -84,7 +84,7 @@ function checkObj(checkProp) {
    
 }
 
-// JavaScript Object Notation or JSONis a related data interchange format used to store data.
+// JavaScript Object Notation or JSON is a related data interchange format used to store data.
 
 /* Add a new album to the myMusic array. Add artist and title strings,
  release_year ,number, and a formats array of strings.
@@ -134,3 +134,28 @@ var myStorage = {
 }
 
 var gloveBoxContents = myStorage.car.inside["glove box"];
+
+//Accessing Nested Arrays
+
+// Retrieve the second tree from the variable my Plants using object dot and array bracket notation
+
+// setup
+
+var myPlants = [
+   {
+      "type": "flowers",
+      "list": [
+         "rose",
+         "tulip",
+         "dandelion"
+      ]
+   },
+   {
+      "type": "trees",
+      "list": [
+         "fir",
+         "pine",
+         "birch"
+      ]
+   }
+]

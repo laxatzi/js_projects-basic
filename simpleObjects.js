@@ -19,6 +19,35 @@ var myDog = {
    ]
 }
 
+// Using objects for lookups
 
+/*Convert the switch statement into an object called lookup. Use it to look up valand assign the associated string to the resultvariable.
+*/
 
+// setup
+function phoneticLookup(val) {
+   var result= "";
 
+   // Switch statement
+
+    switch(val){
+       case "alpha":
+       result= "Adams";
+       break;
+       case "bravo":
+          result = "Boston";
+          break;
+      case "charlie" :
+      result "Chicago";
+      break;
+      case "delta":
+         result "Denver"
+         break;
+      case "echo":
+         result "Easy";
+         break;
+      case "foxtrot":
+         result "Frank";
+    }
+   return result;
+}

@@ -67,3 +67,14 @@ function phoneticLookup(val) {
 
 // Modify the function checkObjto test myObjfor checkProp. If the property is found, return that property's value. If not, return "Not Found"
 
+var myObj ={
+
+   gift: "pony",
+   pet: "puppy"
+}
+
+function checkObj(checkProp) {
+   // your code here
+
+   
+}

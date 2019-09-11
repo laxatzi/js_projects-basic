@@ -61,3 +61,9 @@ function phoneticLookup(val) {
       result = lookup[val];
    return result;
 }
+
+
+// Testing Objects for Properties
+
+// Modify the function checkObjto test myObjfor checkProp. If the property is found, return that property's value. If not, return "Not Found"
+

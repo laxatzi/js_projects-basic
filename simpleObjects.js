@@ -102,6 +102,15 @@ var myMusic = [
                ],
 "gold": true
    },
-   
+   {
+      "artist": "Themis Adamantidis",
+      "title": "Ta voriadakia",
+      "release_year": 1982,
+      "formats": [
+         "CD",
+         "LP"
+      ],
+      "gold": true
+   }
 
 ]

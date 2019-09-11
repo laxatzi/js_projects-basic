@@ -18,3 +18,32 @@ If valueis empty (""), delete the given propproperty from the album.
 
 // Hints:  Use bracket notation when accessing object properties with variables.
 
+//SETUP
+
+var collection = {
+   "2548": {
+
+   },
+   "2468": {
+
+   },
+   "1245":
+   {
+
+   },
+   "5439": {
+
+   }
+
+};
+
+// Keep a copy of the collection for testing
+var collectionCopy   = JSON.parse(JSON.stringify(collection));
+
+// function
+function updateRecords(id, prop, value){
+//code goes here
+   return collection;
+}
+
+

@@ -5,4 +5,9 @@
 
 /* Create a function called randomRange that takes a range myMin and myMax and returns a random number that's greater than or equal to myMin, and is less than or equal to myMax, inclusive.
 */
+function randomRange(minNumb, maxNumb){
+   return Math.floor(Math.random() * (maxNumb - minNumb +1)+minNumb);
+}
 
+
+console.log(randomRange(12,20));

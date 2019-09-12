@@ -14,3 +14,8 @@ function checkSign(num) {
    }
  }
 
+ // recreate the conditional with ternary operators
+
+ function checkSignWithTernary(num) {
+   return num > 0 ? "number is positive" : num === 0 ? "number is zero" : "number is negative";
+}

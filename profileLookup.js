@@ -11,3 +11,40 @@ If name does not correspond to any contacts then return "No such contact"
 If prop does not correspond to any valid properties of a contact found to match name then return "No such property"
 
 */
+//Setup
+var contacts = [
+   {
+       "firstName": "Akira",
+       "lastName": "Laine",
+       "number": "0543236543",
+       "likes": ["Pizza", "Coding", "Brownie Points"]
+   },
+   {
+       "firstName": "Harry",
+       "lastName": "Potter",
+       "number": "0994372684",
+       "likes": ["Hogwarts", "Magic", "Hagrid"]
+   },
+   {
+       "firstName": "Sherlock",
+       "lastName": "Holmes",
+       "number": "0487345643",
+       "likes": ["Intriguing Cases", "Violin"]
+   },
+ {
+   "firstName": "Lambros",
+   "lastName": "Hatzinikolaou",
+   "number": "0487345222",
+   "likes": ["History", "Web Development", "Dogs"]
+ }
+
+]; //end of contacts
+
+
+function lookUpProfile(name, prop){
+         
+
+}
+
+
+

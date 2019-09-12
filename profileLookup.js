@@ -39,22 +39,23 @@ var contacts = [
  }
 
 ]; //end of contacts
-
-
+// needs work
 function lookUpProfile(name, prop){
-       for(var i=0; i<contacts.length; i++){
-         for(var j=0; j<contacts[i].length; j++){
-           if(name===contacts[i].firstName && prop === contacts[i][j]){
-             return contacts[i][j];
-           }
-           else if(name=== contacts[i].firstName){
-             return "No such property";
-           }
-           else {
+   // Only change code below this line
+       for(var j =0; j<contacts.length; j++){
+         if(contacts.hasOwnProperty[j]){
+           if(name === contact[j].firstName){
+             return contact[j].firstName;
+           }else{
              return "No such contact";
            }
          }
+         else {
+           return "No such property";
+         }
        }
+   // Only change code above this line
    }
+   console.log("Lambros", "likes");
 
 

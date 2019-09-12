@@ -40,21 +40,21 @@ var contacts = [
 
 ]; //end of contacts array
 
+
 function lookUpProfile(name, prop){
   // Only change code below this line
+   for (var j = 0; j < contacts.length; j++){
+   if (contacts[j].firstName === name) {
+       if (contacts[j].hasOwnProperty(prop)) {
+           return contacts[j][prop];
+       } else {
+           return "No such property";
+       }
+   }
+}// end of loop
+return "No such contact";  
 
-      for(var j =0; j<contacts.length; j++){
-        if(name === contacts[j].firstName){
-             if(prop !== contacts[j]){
-               return "No such property";
-             }else{
-               return contacts[j]
-             }
-      }else{
-        return "No such contatct";
-      }
-  } // end of loop
-}//end of fucntion
+}//end of function
 
 
 

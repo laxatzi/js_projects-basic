@@ -42,9 +42,19 @@ var contacts = [
 
 
 function lookUpProfile(name, prop){
-         
-
-}
-
+       for(var i=0; i<contacts.length; i++){
+         for(var j=0; j<contacts[i].length; j++){
+           if(name===contacts[i].firstName && prop === contacts[i][j]){
+             return contacts[i][j];
+           }
+           else if(name=== contacts[i].firstName){
+             return "No such property";
+           }
+           else {
+             return "No such contact";
+           }
+         }
+       }
+   }
 
 

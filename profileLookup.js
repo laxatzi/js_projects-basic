@@ -53,7 +53,7 @@ function lookUpProfile(name, prop){
    }
 }// end of loop
 
-return "No such contact";  //If the firstName parameter isn’t matched by the final contacts object, the for loop exits and No such contact is returned. We want to stop the loop in firstName doesn't match name param
+return "No such contact";  //If the firstName parameter isn’t matched by the final contacts object, the for loop exits and No such contact is returned. We want to stop the loop if firstName doesn't match name param thus the return is out of the loop
 
 }//end of function
 

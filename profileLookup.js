@@ -38,24 +38,23 @@ var contacts = [
    "likes": ["History", "Web Development", "Dogs"]
  }
 
-]; //end of contacts
-// needs work
+]; //end of contacts array
+
 function lookUpProfile(name, prop){
-   // Only change code below this line
-       for(var j =0; j<contacts.length; j++){
-         if(contacts.hasOwnProperty[j]){
-           if(name === contact[j].firstName){
-             return contact[j].firstName;
-           }else{
-             return "No such contact";
-           }
-         }
-         else {
-           return "No such property";
-         }
-       }
-   // Only change code above this line
-   }
-   console.log("Lambros", "likes");
+  // Only change code below this line
+
+      for(var j =0; j<contacts.length; j++){
+        if(name === contacts[j].firstName){
+             if(prop !== contacts[j]){
+               return "No such property";
+             }else{
+               return contacts[j]
+             }
+      }else{
+        return "No such contatct";
+      }
+  } // end of loop
+}//end of fucntion
+
 
 

@@ -43,16 +43,17 @@ var contacts = [
 
 function lookUpProfile(name, prop){
   // Only change code below this line
-   for (var j = 0; j < contacts.length; j++){
-   if (contacts[j].firstName === name) {
-       if (contacts[j].hasOwnProperty(prop)) {
+   for (var j = 0; j < contacts.length; j++){   // looping through the objects
+   if (contacts[j].firstName === name) {  // here firstName property plays the role of a 'key' thus, if param 'name' equals firstName the object exists
+       if (contacts[j].hasOwnProperty(prop)) { // So if name is true (object exist)...we examine the second param (prop) with the use of the hasOwnProperty method
            return contacts[j][prop];
        } else {
            return "No such property";
        }
    }
 }// end of loop
-return "No such contact";  
+
+return "No such contact";  //If the firstName parameter isn’t matched by the final contacts object, the for loop exits and No such contact is returned. We want to stop the loop in firstName doesn't match name param
 
 }//end of function
 

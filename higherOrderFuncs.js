@@ -20,3 +20,51 @@ Syntax: array.filter(function(currentValue, index, arr), thisValue) *index, arr 
 // Combining .map(), .reduce(), and .filter()
 
 //get the total score of force users only
+var players = [
+   {
+     shirt_number: 20,
+     name: "Adelino Vierinia",
+     score: 7,
+     minutes: 19000,
+     team: "PAOK",
+   },
+   {
+     shirt_number: 3,
+     name: "Leo Matos",
+     score: 6,
+     minutes: 24000,
+     team: false,
+   },
+   {
+     shirt_number: 10,
+     name: "Daniel Podense",
+     score: 16,
+     minutes: 25000,
+     team: "Olympiakos"
+   },
+   {
+     shirt_number: 20,
+     name: "Petros Mandalos",
+     score: 12,
+     minutes: 22000,
+     team:"AEK"
+   },
+   {
+     shirt_number: 47,
+     name: "Chuba Akpom",
+     score: 9,
+     minutes: 14500,
+    team: "PAOK",
+   },
+ ];
+// use the ES5 syntax// 
+/*  const paokScorersGoals = players.filter(function(player){
+    return player.team==="PAOK";
+ }).map(function(player){
+   return player.score; } 
+ ).reduce(function(accum, player){
+     return accum + player;
+ }, 0);    */
+
+// using ES6 syntax
+

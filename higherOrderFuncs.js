@@ -19,7 +19,7 @@ Syntax: array.filter(function(currentValue, index, arr), thisValue) *index, arr 
 
 // Combining .map(), .reduce(), and .filter()
 
-//get the total score of force users only
+//get the total score of paok team players  only
 var players = [
    {
      shirt_number: 20,

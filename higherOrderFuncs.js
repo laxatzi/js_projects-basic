@@ -72,3 +72,4 @@ const paokScorersGoals = players.filter((player)=> player.team === "PAOK").map(
 
    //. Can you guess how we could only keep .reduce() and get the same result with one line of code?
    // see solution in https://codepen.io/etiennetalbot/pen/EozzeZ?editors=0011
+   // look reduceMethod.js also...

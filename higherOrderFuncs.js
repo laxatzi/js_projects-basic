@@ -69,3 +69,6 @@ var players = [
 // using ES6 syntax
 const paokScorersGoals = players.filter((player)=> player.team === "PAOK").map(
    (player)=> player.score).reduce((accum, player)=> accum + player, 0);
+
+   //. Can you guess how we could only keep .reduce() and get the same result with one line of code?
+   // see solution in https://codepen.io/etiennetalbot/pen/EozzeZ?editors=0011

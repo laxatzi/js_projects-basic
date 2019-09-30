@@ -58,7 +58,7 @@ var players = [
    },
  ];
 // use the ES5 syntax// 
-/*  const paokScorersGoals = players.filter(function(player){
+/*  var paokScorersGoals = players.filter(function(player){
     return player.team==="PAOK";
  }).map(function(player){
    return player.score; } 
@@ -67,4 +67,5 @@ var players = [
  }, 0);    */
 
 // using ES6 syntax
-
+const paokScorersGoals = players.filter((player)=> player.team === "PAOK").map(
+   (player)=> player.score).reduce((accum, player)=> accum + player, 0);

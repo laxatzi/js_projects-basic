@@ -9,3 +9,14 @@ Just like .map(), .reduce() also runs a callback for each element of an array. W
 The accumulator can be pretty much anything (integer, string, object, etc.) and must be instantiated or passed when calling .reduce()
 SYNTAX: array.reduce(function(total, currentValue), initialValue)
 */
+
+/*
+The filter() method 
+creates a new array with all elements that pass the test implemented by the provided function
+Syntax: array.filter(function(currentValue, index, arr), thisValue) *index, arr and thisValue are optional
+
+*/
+
+// Combining .map(), .reduce(), and .filter()
+
+//get the total score of force users only

@@ -25,3 +25,13 @@ return squaredNumbs;
 
 console.log(squareNumbList(realNumbs));//[25, 2025, 64]
 
+
+// Alternative way of checking for integers
+const realNumbs = [5, 6.8, -3.6, 45, 8, 8.34, -4];
+const squareNumbList = (arr)=> {
+const squaredNumbs= arr.filter((num)=> num>0 && Number.isInteger(num).map((num)=>Math.pow(num,2));
+return squaredNumbs;
+}
+
+console.log(squareNumbList(realNumbs));//[25, 2025, 64]
+

@@ -18,7 +18,30 @@ const profileUpdate = ({ name, age, nationality, location }) => {
 
 // This has the added benefit of not having to manipulate an entire object in a function; only the fields that are needed are copied inside the function.
 
+// EXERCISE
+// Use destructuring assignment within the argument to the function half to send only max and min inside the function.
 
+const stats = {
+   max: 56.78,
+   standard_deviation: 4.34,
+   median: 34.54,
+   mode: 23.87,
+   min: -0.75,
+   average: 35.85
+ };
+
+ const half = (function() {
+   "use strict"; // do not change this line
+ 
+   // change code below this line
+   return function ({max,min}) { // use function argument destructuring
+     return (max + min) / 2.0;
+   };
+   // change code above this line
+ 
+ })();
+ console.log(stats); // should be object
+ console.log(half(stats)); // should be 28.015
 
 
 

@@ -10,3 +10,7 @@ const anObj = {
  const {end:{x:endX, y:endY}} = anObj;
  console.log(endX, endY);
  console.log(startX, startY); // 5, 6
+
+//  Set up the exercise
+// Use destructuring assignment to obtain max of forecast.tomorrow and assign it to maxOfTomorrow.
+

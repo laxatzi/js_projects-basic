@@ -16,7 +16,6 @@ let a = 8, b = 6;
 (() => {
   "use strict";
   // change code below this line
-  
   // change code above this line
 })();
 console.log(a); // should be 6
@@ -27,7 +26,8 @@ let a = 8, b = 6;
 (() => {
   "use strict";
   // change code below this line
-  
+  return [a,b]=[b,a];
+
   // change code above this line
 })();
 console.log(a); // should be 6

@@ -4,6 +4,11 @@ const AVG_TEMPERATURES = {
    tomorrow: 79
  };
  
+ const AVG_TEMPS = {
+   today: 60,
+   tomorrow: 70
+ }
+ 
  function getTempOfTmrw(avgTemperatures) {
    "use strict";
    // change code below this line
@@ -13,3 +18,4 @@ const AVG_TEMPERATURES = {
  }
  
  console.log(getTempOfTmrw(AVG_TEMPERATURES)); // should be 79
+ console.log(getTempOfTmrw(AVG_TEMPS)); // should be 70

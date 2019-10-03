@@ -12,3 +12,5 @@ Variables a and b take the first and second values from the array. After that, b
 
 The rest element only works correctly as the last variable in the list. As in, you cannot use the rest operator to catch a subarray that leaves out last element of the original array.
 */
+// EXERCISE
+// Use destructuring assignment with the rest operator to perform an effective Array.prototype.slice()so that arris a sub-array of the original array source with the first two elements omitted.

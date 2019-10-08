@@ -16,7 +16,14 @@ function makeClass() {
        constructor(fahrenheit){
          this.temp = fahrenheit;
        }
-   
+      // getter 
+      get temperature(){
+         return this.temp;
+       }
+       //setter
+       set temperature(celcius){
+         this.temp = celcius * 9.0 / 5 + 32;
+       }
      }
    /* Alter code above this line */
    return Thermostat;

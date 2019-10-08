@@ -9,3 +9,15 @@ Note
 
 When you implement this, you would be tracking the temperature inside the class in one scale - either Fahrenheit or Celsius.
 */
+function makeClass() {
+   "use strict";
+   /* Alter code below this line */
+     class Thermostat {
+       constructor(fahrenheit){
+         this.temp = fahrenheit;
+       }
+   
+     }
+   /* Alter code above this line */
+   return Thermostat;
+ }

@@ -10,21 +10,26 @@ Note
 When you implement this, you would be tracking the temperature inside the class in one scale - either Fahrenheit or Celsius.
 */
 function makeClass() {
-   "use strict";
-   /* Alter code below this line */
-     class Thermostat {
-       constructor(fahrenheit){
-         this.temp = fahrenheit;
-       }
-      // getter 
-      get temperature(){
-         return this.temp;
-       }
-       //setter
-       set temperature(celcius){
-         this.temp = celcius * 9.0 / 5 + 32;
-       }
-     }
-   /* Alter code above this line */
-   return Thermostat;
- }
+  "use strict";
+  /* Alter code below this line */
+    class Thermostat {
+      constructor(fahrenheit){
+        this.temp = fahrenheit;
+      }
+     // getter 
+     get temperature(){
+        return this.temp;
+      }
+      //setter
+      set temperature(fahrenheit){
+        this.temp = 5/9 * (fahrenheit - 32);
+      }
+    }
+  /* Alter code above this line */
+  return Thermostat;
+}
+const Thermostat = makeClass();
+const fahrenheitThermostat = new Thermostat(76); // setting in Fahrenheit scale
+fahrenheitThermostat.temperature = 65;
+let convertFtoC = fahrenheitThermostat.temperature;
+console.log(convertFtoC);

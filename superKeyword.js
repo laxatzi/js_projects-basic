@@ -1,3 +1,5 @@
+// #Two  more examples on extends and super()
+
 class Meetup {
    constructor(organizer){
       this.organizer = organizer;
@@ -25,3 +27,6 @@ console.log(getOrganized.organizer);
   inside constructor of child class.
 
  */
+
+ // one more example
+

@@ -25,6 +25,6 @@ class World extends Hello {
    }
 }
 
-const greeter = new Hello("Hello");
+const greeter = new World("Hello");
 console.log(greeter.greet); // output: "Hello"
 console.log(greeter.greetWorld());

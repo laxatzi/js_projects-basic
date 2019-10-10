@@ -55,3 +55,15 @@ let getOrganized2 = new techMeet2();
 console.log(getOrganized2.organise);
 console.log(techMeet2.getMeetupFounderDetails());
 
+/*
+  Explanation:
+
+- Child class can access the methods of 
+  parent class using 'super' object like 
+  super.organise().
+
+- Similarly static methods of child class can 
+  access the static method of parent class 
+  with help of 'super' object.
+
+ */

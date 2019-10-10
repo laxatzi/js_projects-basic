@@ -1,5 +1,11 @@
 //Example of Inheritance with constructor
+class Meetup {
+   constructor(){
+      console.log('inside Meetup constructor');
+   }
 
+   
+}
 
 /*
  Explanation:

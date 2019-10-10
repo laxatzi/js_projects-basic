@@ -8,11 +8,23 @@ class Hello {
    constructor(greet){
       this.greet = greet;
    }
-   greeting(){
+   greet(){
       return this.greet;
    }
 }
 
-greeter = new Hello("Hello");
-console.log(greeter.greet); // output: "Hello"
 
+
+class World extends Hello {
+   constructor(){
+      super("Hello");
+   }
+
+   greetWorld(){
+      return super.greet()+ ", World!";
+   }
+}
+
+const greeter = new Hello("Hello");
+console.log(greeter.greet); // output: "Hello"
+console.log(greeter.greetWorld());

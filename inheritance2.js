@@ -4,9 +4,17 @@ class Meetup {
       console.log('inside Meetup constructor');
    }
 
-   
+
 }
 
+class techMeet extends Meetup {
+   constructor(){
+      super();
+      console.log('inside Meetup constructor');
+   }
+}
+
+let js2 = new techMeet();
 /*
  Explanation:
 

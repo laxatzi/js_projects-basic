@@ -25,6 +25,7 @@ class World extends Hello {
    }
 }
 
-const greeter = new World("Hello");
+const greeter = new World("Hello");  // here the constructor should be the subclass world, provided that we want the greetWorld function to be instansinated (see below)
+
 console.log(greeter.greet); // output: "Hello"
-console.log(greeter.greetWorld());
+console.log(greeter.greetWorld()); // output: "Hello, World!"

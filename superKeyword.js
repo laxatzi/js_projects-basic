@@ -45,7 +45,7 @@ class techMeet2 extends Meetup2 {
       console.log('Organising techMeet4');
       super.organise();
    }
-   static getMeetUpFounderDetails(){
+   static getMeetupFounderDetails(){
       console.log('techMeet2 Founder details');
       super.getMeetupFounderDetails();
    }

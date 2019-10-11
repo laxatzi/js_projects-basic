@@ -53,7 +53,12 @@ class techMeet2 extends Meetup2 {
 
 let getOrganized2 = new techMeet2();
 console.log(getOrganized2.organise);
+// "Organising techMeet2"
+//"Organizing Meetup 2"
+
 console.log(techMeet2.getMeetupFounderDetails());
+//"techMeet2 Founder details"
+//"Meeup2 founder details"
 
 /*
   Explanation:

@@ -6,7 +6,6 @@ console.log(rand);
 // The number the Math.random() method generates is inclusive of 0 (as in, it could sometimes be 0, though I’ve never personally seen that happen), but exclusive of 1 (as in, it will never reach 1).
 
 
-
 // Getting numbers bigger than 0 #
 
 // What if you wanted to get integers, or whole numbers, instead of floats?
@@ -16,4 +15,6 @@ console.log(rand);
 var randomOverZero = function(num){
    return Math.random() * num;
 }
-
+//example
+var rand100 = randomOverZero(100);
+console.log(rand100); // 65.661

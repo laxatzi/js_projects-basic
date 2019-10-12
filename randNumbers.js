@@ -26,3 +26,4 @@ console.log(rand100); // 65.661
 var randomInteger = function (pow) {
 	return Math.floor(Math.random() * pow);
 };
+console.log(randomInteger(34)); //23

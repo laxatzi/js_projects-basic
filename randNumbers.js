@@ -35,3 +35,11 @@ For that, we’ll create a helper function that accepts a min and max for the ra
 // Then, we’ll subtract the min from the max, and add 1 to it (otherwise the max would never be reached). We’ll multiply the returned value of Math.random() by this new number, and add the min to it. This gives us a random float between our two values.
 
 // Finally, we’ll use Math.floor() to turn it into an integer, and return the result.
+
+var randomNumber = function (min, max) {
+	return Math.floor(Math.random() * (max - min + 1) + min);
+};
+
+// Logs something like 37
+var rand = randomNumber(5, 42);
+console.log(rand);

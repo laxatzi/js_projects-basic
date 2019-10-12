@@ -18,3 +18,11 @@ var randomOverZero = function(num){
 //example
 var rand100 = randomOverZero(100);
 console.log(rand100); // 65.661
+
+// Getting a random integer #
+
+// For that, we can use the Math.floor() method after multiplying the returned value of Math.random() by our power of ten.
+
+var randomInteger = function (pow) {
+	return Math.floor(Math.random() * pow);
+};

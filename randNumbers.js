@@ -42,4 +42,5 @@ var randomNumber = function (min, max) {
 
 // Logs something like 37
 var rand = randomNumber(5, 42);
-console.log(rand);
+console.log(rand);// 14
+

@@ -42,7 +42,7 @@ class Meetup2 {
 class techMeet2 extends Meetup2 {
    organise() {
       // super.organise()
-      console.log('Organising techMeet4');
+      console.log('Organising techMeet2');
       super.organise();
    }
    static getMeetupFounderDetails(){

@@ -30,7 +30,7 @@ console.log(randomInteger(34)); //23
 
 
 // Getting a random integer between two numbers #
-For that, we’ll create a helper function that accepts a min and max for the random number as arguments.
+//For that, we’ll create a helper function that accepts a min and max for the random number as arguments.
 
 // Then, we’ll subtract the min from the max, and add 1 to it (otherwise the max would never be reached). We’ll multiply the returned value of Math.random() by this new number, and add the min to it. This gives us a random float between our two values.
 

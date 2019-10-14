@@ -44,5 +44,13 @@ items.forEach((item)=>{
 // it works very similarly to the for loop but it takes a function as a param instead
 
 
-// Sum method
-// 
+// Some method
+// This method differs from the previous ones in that it returns a boolean instead of a brand new array
+
+// In our example let's check if some of the items in the items array has a price less than 100
+
+const hasInexpensiveItems = items.some((item)=>{  // bare in mind name convention here (it starts with has since it is a boolean)
+      return item.price <= 100;
+});
+
+console.log(hasInexpensiveItems);

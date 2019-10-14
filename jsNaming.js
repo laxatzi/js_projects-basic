@@ -100,3 +100,13 @@ class SoftwareDeveloper {
    }
  }
  var me = new SoftwareDeveloper('Robin', 'Wieruch');
+
+ // good
+var name = me.name;
+console.log(name);
+// "Robin Wieruch"
+
+// bad
+name = me._getName(me.firstName, me.lastName);
+console.log(name);
+// "Robin Wieruch"

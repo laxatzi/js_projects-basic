@@ -33,3 +33,16 @@ const foundItem = items.find((item)=>{
 });
 
 console.log(foundItem);
+
+
+// forEach method
+// unlike the previous methods forEach doesn't actually returns anything
+
+items.forEach((item)=>{
+    console.log(item.name);
+});
+// it works very similarly to the for loop but it takes a function as a param instead
+
+
+// Sum method
+// 

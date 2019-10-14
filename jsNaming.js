@@ -56,3 +56,10 @@ function UserProfile(user) {
    );
  }
 
+// When a component gets used, it distinguishes itself from native HTML and web components, because its first letter is always written in uppercase.
+
+<div>
+  <UserProfile
+    user={{ firstName: 'Robin', lastName: 'Wieruch' }}
+  />
+</div>

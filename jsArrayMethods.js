@@ -54,3 +54,14 @@ const hasInexpensiveItems = items.some((item)=>{  // bare in mind name conventio
 });
 
 console.log(hasInexpensiveItems);
+
+
+// Every method
+// This method is very similar to the 'some' method with the difference that instead of checking for a single item it makes sure that 'every single' agrees with the condition (it returns a boolean)
+
+const hasOnlyInexpensiveItems = items.every((item)=>{  // bare in mind name convention here (it starts with has since it is a boolean)
+   return item.price <= 100;
+});
+
+console.log(hasOnlyInexpensiveItems); //false
+

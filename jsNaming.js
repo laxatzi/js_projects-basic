@@ -1,6 +1,6 @@
 // JAVASCRIPT NAMING CONVENTIONS
 
-// Boolean
+// Boolean naming conventions
 /*
     A prefix like 'is', 'are, or 'has' helps every javascript developer 
     to distinguish a boolean from another date type by just looking at it
@@ -15,6 +15,13 @@ var areEqual = true;  // good
 
 var encryption = true; // bad 
 var hasEncryption = true; // good
+
+
+// Class naming convention
+/* 
+    
+
+*/
 
 
 

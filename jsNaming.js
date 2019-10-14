@@ -110,3 +110,19 @@ console.log(name);
 name = me._getName(me.firstName, me.lastName);
 console.log(name);
 // "Robin Wieruch"
+
+
+// CONSTANT naming conventions
+/*
+Intended to be non-changing variables
+are written in Caps
+*/
+
+var SECONDS = 60;
+var MINUTES = 60;
+var HOURS = 24;
+var DAY = SECONDS * MINUTES * HOURS;
+//if a variable has more than one word as its variable name, it makes use of underscores
+var DAYS_UNTIL_TOMORROW = 1;
+
+// It is good practice to define constants at the top of a javascript file.

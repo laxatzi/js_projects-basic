@@ -79,3 +79,13 @@ class SoftwareDeveloper {
  var me = new SoftwareDeveloper('Robin', 'Wieruch');
  console.log(me.getName());
  // "Robin Wieruch"
+
+
+ //PRIVATE naming conventions
+
+ //Rarely you will find an underscore (_) in front of a variable/function/method in JavaScript. If you see one, it is intended to be private. 
+ 
+ //Even though it cannot be really enforced by JavaScript, declaring something as private tells us about how it should be used or how it should not be used.
+
+ //For instance, a private method in a class should only be used internally by the class, but should be avoided to be used on the instance of the class:
+

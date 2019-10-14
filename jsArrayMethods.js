@@ -25,4 +25,11 @@ const nameOfItems = items.map((item)=>{
 })
 console.log(nameOfItems);// ["Bike", "TV", "Album","Book", "SmartPhone", "Laptop"]
 
+// Find method
+// This method allows you to find a single object in an array
 
+const foundItem = items.find((item)=>{
+    return item.name === 'Book';
+});
+
+console.log(foundItem);

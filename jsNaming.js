@@ -89,3 +89,14 @@ class SoftwareDeveloper {
 
  //For instance, a private method in a class should only be used internally by the class, but should be avoided to be used on the instance of the class:
 
+ class SoftwareDeveloper {
+   constructor(firstName, lastName) {
+     this.firstName = firstName;
+     this.lastName = lastName;
+     this.name = _getName(firstName, lastName);
+   }
+   _getName(firstName, lastName) {
+     return `${firstName} ${lastName}`;
+   }
+ }
+ var me = new SoftwareDeveloper('Robin', 'Wieruch');

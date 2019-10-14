@@ -63,3 +63,19 @@ function UserProfile(user) {
     user={{ firstName: 'Robin', lastName: 'Wieruch' }}
   />
 </div>
+
+// METHOD
+//Identical to JavaScript functions, a method on a JavaScript class is declared with camelCase:
+
+class SoftwareDeveloper {
+   constructor(firstName, lastName) {
+     this.firstName = firstName;
+     this.lastName = lastName;
+   }
+   getName() {
+     return `${this.firstName} ${this.lastName}`;
+   }
+ }
+ var me = new SoftwareDeveloper('Robin', 'Wieruch');
+ console.log(me.getName());
+ // "Robin Wieruch"

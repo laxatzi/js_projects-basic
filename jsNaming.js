@@ -36,5 +36,23 @@ var me = new SoftwareDeveloper('Robin', 'Wieruch');
    Components are not everywhere in JavaScript, but commonly found in front-end frameworks like React. 
    Since a component is instantiated like a JS class, they are widely declared with Pascal Case 
 */
+// bad
+function userProfile(user) {
+   return (
+     <div>
+       <span>First Name: {user.firstName}</span>
+       <span>Last Name: {user.lastName}</span>
+     </div>
+   );
+ }
 
+ // good
+function UserProfile(user) {
+   return (
+     <div>
+       <span>First Name: {user.firstName}</span>
+       <span>Last Name: {user.lastName}</span>
+     </div>
+   );
+ }
 

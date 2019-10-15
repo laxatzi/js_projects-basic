@@ -3,7 +3,7 @@
 const myPromise = new Promise(
    (resolve, reject)=>{
       if(Math.random() * 100 <= 90){
-         resolve('Hello, promises!');
+         resolve('Hello, promises!');  // logged statement to check state changes
       }
       reject(new Error('Sorry, we failed. Miserably'));
    }
@@ -39,5 +39,13 @@ myPromise.then(whenResolved, whenRejected);
 /*
     Once a promise reaches a final state, the state wont change, that is the computation wont be done again even if you attach .then handler multiple times thus...
    A promise can resolved or rejected once. It cannot resolved again if succeeded or rejected (changing state from success to failure) and vice versa.
+   To verify this you can see the console.log statement on line 6
+   When running the code with BOTH .then handlers the code will be logged only ONCE
+   The promise 'caches' the result so next time will give the same cached result
+   ALSO:
+   notice that promises fire immediately . They start execution as soon as we declare them and bind them in variables. 
+   To ensure that promises doesn't fire immediately we wrap them in a function
 */
+
+// Catching promises
 

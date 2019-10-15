@@ -34,3 +34,10 @@ console.log('Download started');
 // #1 the handlePhoto function is declared
 // #2 the downloadPhoto function is invoked and at the same time handlePhoto function is passed as a callback
 // #3 "Download started" is printed out to the log
+
+// Things to bare in mind: 
+// The handlePhoto is not invoked yet, it is just created and passed as a callback into the downloadPhoto function. It wont run UNTIL downloadPhoto finishes its task. (in that case downloading a photo)
+
+// So it is important to understand that the order things happening does not read top-to-bottom. 
+// It is task completion that defines the order of execution
+

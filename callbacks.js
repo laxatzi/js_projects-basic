@@ -19,8 +19,18 @@ console.log(photo); // undefined
 
 // in the above senario the gif makes long time to download and pause your programme while downloading
 // instead, you store the code that should run AFTER the download is completed into a callback function.
+
+var photo = downloadPhoto('http//site.com/cat.gif', handlePhoto);
 function handlePhoto(error, photo){
    if(error) console.log('Download not possible', error)
    else console.log('Download finished', photo)
 }
 console.log('Download started');
+
+
+// NOTE:
+// explaining order of executions as the code runs
+
+// #1 the handlePhoto function is declared
+// #2 the downloadPhoto function is invoked and at the same time handlePhoto function is passed as a callback
+// #3 "Download started" is printed out to the log

@@ -80,9 +80,9 @@ console.log(totalPrice);// 1840
 // This method differs in that it doesn't take a function but instead a single argument
 
 // Let's have an array of numbers
-const myNumbs = [1, 4, 6, 9];
+const myNumbs = [1,2, 4, 6, 9];
 const includesTwo = myNumbs.includes(2); // it merely going to check if the argument passed is inside the array
 const includesSeven = myNumbs.includes(7);
-console.log(includeTwo) // true
-console.log(includeSeven)// false
+console.log(includesTwo) // true
+console.log(includesSeven)// false
 

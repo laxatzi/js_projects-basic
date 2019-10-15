@@ -30,12 +30,14 @@ const whenResolved = (resolvedValue)=> console.log(resolvedValue);
 const whenRejected = (error)=> console.log(error);
 // the above two functions will be passed as callbacks to the then() method in the bellow line
 
-myPromise.then(whenResolved, whenRejected);
+myPromise.then(whenResolved, whenRejected); 
 
 // first callback will be invoked when the promise is resolved
 // second callback will be invoked when the promise is rejected
 
 // NOTE:
 /*
-     If a promise has been executed and you later add a callback 
+    Once a promise reaches a final state, the state wont change, that is the computation wont be done again even if you attach .then handler multiple times thus...
+   A promise can resolved or rejected once. It cannot resolved again if succeeded or rejected (changing state from success to failure) and vice versa.
 */
+

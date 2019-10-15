@@ -18,7 +18,7 @@ function asyncFunc(work) {
    // A Promise object is created using the new keyword and its constructor. This constructor takes as its argument a function, called the "executor function". This function should take two functions as parameters. The first of these functions (resolve) is called when the asynchronous task completes successfully and returns the results of the task as a value. The second (reject) is called when the task fails, and returns the reason for failure, which is typically an error object ~ mozilla.org     
    
            if (work === "")
-               reject(Error("Nothing"));
+               reject(Error("Nothing Here"));
                
    // An "if statement" stating that if the "work" parameter of the "asyncFunc" function is === (identical to) "" (meaning left blank) then call the "reject" function which then returns an Error object
    

@@ -29,5 +29,13 @@ HOW CAN WE ACCESS THE VALUE PASSED BY resolve and reject FUNCTIONS?
 const whenResolved = (resolvedValue)=> console.log(resolvedValue);
 const whenRejected = (error)=> console.log(error);
 // the above two functions will be passed as callbacks to the then() method in the bellow line
+
 myPromise.then(whenResolved, whenRejected);
 
+// first callback will be invoked when the promise is resolved
+// second callback will be invoked when the promise is rejected
+
+// NOTE:
+/*
+     If a promise has been executed and you later add a callback 
+*/

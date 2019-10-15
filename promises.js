@@ -49,3 +49,4 @@ myPromise.then(whenResolved, whenRejected);
 
 // Catching promises
 
+

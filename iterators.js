@@ -135,6 +135,38 @@ const favAuthorsOfMine = {
       // store current genre and author index
       let currentAuthorIndex = 0;
       let currentGenreIndex = 0;
+
+      return {
+         // implementation of next()
+         next() {
+            // genre authors according to currentGenreIndex
+            const authors = allGenres[currentGenreIndex];
+      // check authors
+            const noMoreAuthors = !(currentAuthorIndex < authors.length);// all arr items are consumed
+            if(noMoreAuthors){
+               // when all arr items in genre array are indeed consumed...we move on to the next genre
+               currentGenreIndex++;
+               currentAuthorIndex = 0; // reset the author index to get new set of authors from the beginning
+
+            }// end if
+      // check genres 
+      // if all genres are over stop the iterator
+      const noMoreGenres = !(currentGenreIndex <allGenres.length);
+      if(noMoreGenres){
+         // Hence done = true
+         return {
+            value: undefined,
+            done: true
+         }
+      }// end if
+   
+   // if everything is correct return the author from the current genre and increment the currentAuthorIndex so next time the next author can be returned
+         return {
+            value: allGenres[currentGenreIndex][currentAuthorIndex],
+            done: false
+         }
+         }// end next()
+      }
    }
 }// end of var
 

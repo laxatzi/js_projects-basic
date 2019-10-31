@@ -85,3 +85,14 @@ const myFavoriteAuthor = {
 
 console.log(myFavoriteAuthor.allAuthors.greek_fiction);
 
+//It’s a simple approach. It accomplishes our current task of getting all the authors. However, a few problems can arise with this implementation.
+
+//The developer will have to know the exact name and return type of the method that returns all the data.
+// What about if another developer returns an array of objects instead an array of strings in the above example e.g [{name: "Alexandros Papadiamantis"}, {name: "Ioannis Kondilakis"}, ...]
+// What if someone creates a similar obj with a diff name
+
+// So We make a rule that the name of the method and the return type will be fixed and unchangeable
+// we call the built in method 'iteratorMethod'
+// This is the basic idea behind the Symbol.iterator ECMA's method
+
+

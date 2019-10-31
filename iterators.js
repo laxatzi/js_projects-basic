@@ -43,3 +43,45 @@ for (let myFavAuthor of myFavoriteAuthors){
 }
 */
 // Now i get "TypeError: myFavoriteAuthors is not iterable"
+// We want some kind of method through which we can expose all our internal data sequentially.
+
+const myFavoriteAuthor = {
+   allAuthors: {
+      greek_fiction:[
+         "Alexandros Papadiamantis",
+         "Andreas Karkavitsas",
+         "Gregorios Xenopoylos",
+         "Ioannis Kondilakis"
+      ],
+      international_fiction:[
+         "Goerge Simenon",
+         "Andrea Camilleri",
+         "Emil Zola",
+         "Frank Kern"
+      ],
+      philosophy:[
+         "Marcus Aurelius",
+         "Aristotle",
+         "Arrianus",
+         "Viktor Frankl"
+      ]
+   },
+   getAllAuthors() {
+      const authors = [];
+      for(const author of this.allAuthors.greek_fiction){
+         authors.push(author);
+      }
+      for(const author of this.allAuthors.international_fiction){
+         authors.push(author);
+      }
+      for (const author of this.allAuthors.philosophy){
+         authors.push(author);
+      }
+      return author;
+
+   }// end of method
+} // end of obj
+
+
+console.log(myFavoriteAuthor.allAuthors.greek_fiction);
+

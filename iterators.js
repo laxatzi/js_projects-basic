@@ -107,5 +107,33 @@ console.log(myFavoriteAuthor.allAuthors.greek_fiction);
 // here is the full implementation
 
 
+const favAuthorsOfMine = {
+   allAuthors: {
+      greek_fiction:[
+         "Alexandros Papadiamantis",
+         "Andreas Karkavitsas",
+         "Gregorios Xenopoylos",
+         "Ioannis Kondilakis"
+      ],
+      international_fiction:[
+         "Goerge Simenon",
+         "Andrea Camilleri",
+         "Emil Zola",
+         "Frank Kern"
+      ],
+      philosophy:[
+         "Marcus Aurelius",
+         "Aristotle",
+         "Arrianus",
+         "Viktor Frankl"
+      ]
+   }, // end of allAuthors obj
+   [Symbol.iterator](){
+      // 1. Get all the authors in an array
+      
+   }
+}// end of var
+
+
 
 

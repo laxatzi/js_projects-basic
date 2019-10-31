@@ -130,10 +130,23 @@ const favAuthorsOfMine = {
    }, // end of allAuthors obj
    [Symbol.iterator](){
       // 1. Get all the authors in an array
-      
+      // We use the Object.values method*
+      const allGenres = Object.values(this.allAuthors);
+      // store current genre and author index
+      let currentAuthorIndex = 0;
+      let currentGenreIndex = 0;
    }
 }// end of var
 
 
 
+/* * const object1 = {
+  a: 'somestring',
+  b: 42,
+  c: false
+};
+
+console.log(Object.values(object1));
+Comment: expected output: Array ["somestring", 42, false]
+*/
 

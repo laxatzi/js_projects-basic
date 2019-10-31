@@ -1,4 +1,5 @@
 // Javascript iterators
+// An iterable is a data structure 
 
 // Lets say we have the bellow array and want to get back all the individual values in the array for printing them on the screen, manipulating them, or for performing some action on them
 
@@ -94,5 +95,17 @@ console.log(myFavoriteAuthor.allAuthors.greek_fiction);
 // So We make a rule that the name of the method and the return type will be fixed and unchangeable
 // we call the built in method 'iteratorMethod'
 // This is the basic idea behind the Symbol.iterator ECMA's method
+
+// Symbol.iterator makes myFavoriteAuthor variable iterable and thus let for..of work.
+/*
+    1. When for..of starts it calls the method once (or gives an error if not found). The method must return an iterator-an object with the method next.
+    2. Onward for..of works only with the return object.
+    3. When for..of wants the next value it calls the next() method on that object
+    4. The result of next must have the form of {done: boolean, value: any} where done=true means that the iteration is finished otherwise value is the next value
+*/
+
+// here is the full implementation
+
+
 
 

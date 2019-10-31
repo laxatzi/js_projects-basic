@@ -45,7 +45,7 @@ for (let myFavAuthor of myFavoriteAuthors){
 */
 // Now i get "TypeError: myFavoriteAuthors is not iterable"
 // We want some kind of method through which we can expose all our internal data sequentially.
-
+/*
 const myFavoriteAuthor = {
    allAuthors: {
       greek_fiction:[
@@ -85,6 +85,7 @@ const myFavoriteAuthor = {
 
 
 console.log(myFavoriteAuthor.allAuthors.greek_fiction);
+*/
 
 //It’s a simple approach. It accomplishes our current task of getting all the authors. However, a few problems can arise with this implementation.
 
@@ -162,7 +163,7 @@ const favAuthorsOfMine = {
    
    // if everything is correct return the author from the current genre and increment the currentAuthorIndex so next time the next author can be returned
          return {
-            value: allGenres[currentGenreIndex][currentAuthorIndex],
+            value: allGenres[currentGenreIndex][currentAuthorIndex++],// incrementation here is very important in order to avoid infinite loop
             done: false
          }
          }// end next()
@@ -170,6 +171,9 @@ const favAuthorsOfMine = {
    }
 }// end of var
 
+for (let author of favAuthorsOfMine){
+   console.log(author);
+}
 
 
 /* * const object1 = {

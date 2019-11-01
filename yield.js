@@ -22,3 +22,19 @@ const gen = generator();
 console.log(gen.next().value); // 7
 console.log(gen.next().value)//undefined
 console.log(gen.next()); // [object Object]{done: true, value: undefined}
+
+// return can be also be used in generators...but, contrary to yield, return will escape code
+
+function * generator() {
+   yield 1;
+   return 2;
+   yield 3; // this yield will never be reached
+}
+const gen = generator();
+
+console.log(gen.next()); // [object Object] {value:1, done: false}
+console.log(gen.next()); // [object Object] {value:2, done:true}
+console.log(gen.next()); // [object Object] {value:undefined, done: true}
+
+// yield delegator
+

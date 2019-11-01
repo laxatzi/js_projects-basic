@@ -37,4 +37,20 @@ console.log(gen.next()); // [object Object] {value:2, done:true}
 console.log(gen.next()); // [object Object] {value:undefined, done: true}
 
 // yield delegator
+// yield with asterisk ...can delegate it's work to another generator. This way you can chain as many generator as  you want
 
+function * anotherDelegator(i){
+   yield i + 1;
+   yield i + 2;
+   yield i + 3;
+}
+
+function * generator(i){
+   yield * anotherDelegator(i);
+}
+
+var gen = generator(2);
+
+console.log(gen.next().value); // 3
+console.log(gen.next().value); // 4
+console.log(gen.next().value); //5

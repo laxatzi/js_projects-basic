@@ -33,6 +33,19 @@ console.log(gen.next().value); // {value: undefined, done: true}
 
 // not only next() we can use to iterate generator. But using for-of loop we get all the values(not the object) of our generator
 
+function * generator2(arr){
+   for (const element in arr){
+      yield element;
+   }
+}
+
+const gen3 = generator2([0,1,2]);
+
+for(const g of gen3) {
+   console.log(g); // 0 -> 1 -> 2 ->
+}
+
+console.log(gen3.next()); // {value: undefined, done:true}
 
 
-
+// method return

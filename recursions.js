@@ -34,3 +34,13 @@ console.log(factorial(3)); // 6
        factorial(3) returns 3* factorial(2, of 3* 2*1*1 = 6
 */
 
+//EXAMPLE 2: REVERSING A STRING
+
+function revStr(str){
+   if(str === '') return '';  // Base case
+   return revStr(str.substr(1)) + str[0]; // recursion
+}
+// no termination case here: we can't get a string that has negative characters
+console.log(revStr('dog'));// god
+
+// break it down line by line

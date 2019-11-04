@@ -117,13 +117,28 @@ console.log(rangeOfNums(3,6)); //[3,4,5,6]
     [5,4,3,2,1] inside of it.
 
 */
+/*
 function countdown(myArray, n){
    if(n<1) return;
    else if(n === 1) return [1];
    else {
-      var counting =  countdown(myArray, n-1 ).concat(n);
+      var counting =  countdown(myArray, n-1 );
+      counting.unshift(n);
       return counting;
    }
  }
 var myArr = [];
- console.log(countdown(myArr, 5));
+ console.log(countdown(myArr, 10));
+ */
+function finalCountdown(myArr, num){
+
+      if(num <= 0){
+        return;
+      }
+      else{
+        myArray.push(num);
+        finalCountdown(myArray, num - 1);
+      }
+   }
+   var myArr = [];
+   console.log(finalCountdown(myArr,7));

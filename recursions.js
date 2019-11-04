@@ -61,3 +61,27 @@ console.log(revStr('dog'));// god
    4 revStr('dog') returns revStr('go') +'d' => 'god'
    5  
 */
+
+// another example
+// Multiply the elements from 0 to n (inclusive in an array) to create the pruduct (γινόμενον) of 
+// those elements
+
+// above task with a for loop
+function multiply(arr, n){
+   let product = arr[0];
+   for(let j=0; j<=n; j++){
+      product *= arr[j];
+   }
+   return product;
+}
+
+console.log(multiply([2,3], 1)); // 12
+
+// same task with recursion function
+
+function multi(arr2, i){
+   if(i<=0) return arr2[0];
+   return multi(arr2, i-1)* arr2[i];
+}
+
+console.log(multi([4,5,6], 2)); // 120

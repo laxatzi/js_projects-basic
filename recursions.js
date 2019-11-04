@@ -3,7 +3,7 @@
 // recursion example: function returns the factorial of an integer
 
 function factorial(x){
-   if(x<0) return; //1. TERMINATION: factorial a neg number is not possible
+   if(x < 0) return; //1. TERMINATION: factorial a neg number is not possible
    if(x === 0) return 1; //2. BASE: factorial can't go beyond 0
    return x * factorial(x-1); // 3. RECURSION returning value of x multiplied by value of whatever                                     factorial(x-1) evaluates to 
 }
@@ -32,7 +32,7 @@ console.log(factorial(3)); // 6
        factorial(0) returns 1
        factorial(1) returns 1* factorial(0), or just 1*1
        factorial(2) returns 2* factorial(1), or just 2*1*1
-       factorial(3) returns 3* factorial(2, of 3* 2*1*1 = 6
+       factorial(3) returns 3* factorial(2, of 3*2*1*1 = 6
 */
 
 //EXAMPLE 2: REVERSING A STRING
@@ -64,7 +64,7 @@ console.log(revStr('dog'));// god
 */
 
 // another example
-// Multiply the elements from 0 to n (inclusive in an array) to create the pruduct (γινόμενον) of 
+// Multiply the elements from 0 to n (inclusive in an array) to create the product (γινόμενον) of 
 // those elements
 
 // above task with a for loop
@@ -106,4 +106,24 @@ function rangeOfNums(startNum, endNum){
     }
 }
 
-console.log(rangeOfNums(3,6));
+console.log(rangeOfNums(3,6)); //[3,4,5,6]
+
+// Exercise
+/*
+    We have defined a function called countdown with two params.
+    The function should take an array in the myArray param and append the numbers 'n'
+    through 1 based on the 'n' parameter.
+    For example, calling this function with n=5, will pad the array with the numbers
+    [5,4,3,2,1] inside of it.
+
+*/
+function countdown(myArray, n){
+   if(n<1) return;
+   else if(n === 1) return [1];
+   else {
+      var counting =  countdown(myArray, n-1 ).concat(n);
+      return counting;
+   }
+ }
+var myArr = [];
+ console.log(countdown(myArr, 5));

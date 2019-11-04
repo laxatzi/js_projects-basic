@@ -16,9 +16,10 @@ console.log(factorial(3)); // 6
     // if (something bad happens){STOP};
    
    // 2. Base case: if(this happens){ Yah! We are done! }; 
-   // Base cases are usually within an if statement
-   // Base case is the minimum goal of our recursive function
-   
+
+   /* Base case is the minimum goal of our recursive function
+      The base case (usually within an if statement) tells the recursive function when it no longer needs to call itself. It is a simple case where the return value is already known. There will also be a recursive call which executes the original function with different arguments. If the function is written correctly, eventually the base case will be reached.
+  */
 
    //3. The actual recursion
    // Our function calling itself
@@ -85,3 +86,24 @@ function multi(arr2, i){
 }
 
 console.log(multi([4,5,6], 2)); // 120
+
+// Exercise: 
+
+/*
+We have defined a function named rangeOfNums with two params.
+The function should return an array of integers which begins 
+with a number represented by the startNum parameter, and ends 
+with the number represented by the endNum parameter.
+The starting number will always be less than or equal to the ending one.
+Use recursion function
+*/
+
+function rangeOfNums(startNum, endNum){
+    if(endNum< startNum) return ;
+    else if(endNum - startNum === 0) return [startNum];
+    else {
+       return rangeOfNums(startNum, endNum-1).concat(endNum);
+    }
+}
+
+console.log(rangeOfNums(3,6));

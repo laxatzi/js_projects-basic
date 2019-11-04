@@ -54,3 +54,7 @@ var gen = generator(2);
 console.log(gen.next().value); // 3
 console.log(gen.next().value); // 4
 console.log(gen.next().value); //5
+
+
+
+

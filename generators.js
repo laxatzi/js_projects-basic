@@ -61,3 +61,10 @@ console.log(gen.return("howdy")); // {value: "howdy", done: true}
 console.log(gen.next()); // {value: undefined, done: true} - all next() calls after return() will return the same output
 
 //Return() will ignore any code in the generator function that you have. But will set the value based on a passed argument and set done to be true. Any calls next() after return() will return done-object.
+
+// Custom Methods
+
+function * generator(){
+   yield 1;
+}
+

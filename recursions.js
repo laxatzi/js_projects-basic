@@ -22,3 +22,15 @@ console.log(factorial(3)); // 6
 
    //3. The actual recursion
    // Our function calling itself
+
+
+   // Now that our function has finally returned, everything will unwind.
+   //since recursion is simply a group of NESTED function calls.
+   // With nested functions, the most inner nested function wil be returned first
+   /*
+       factorial(0) returns 1
+       factorial(1) returns 1* factorial(0), or just 1*1
+       factorial(2) returns 2* factorial(1), or just 2*1*1
+       factorial(3) returns 3* factorial(2, of 3* 2*1*1 = 6
+*/
+

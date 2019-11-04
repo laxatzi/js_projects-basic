@@ -44,3 +44,20 @@ function revStr(str){
 console.log(revStr('dog'));// god
 
 // break it down line by line
+/* 
+   str.substr(1) === 'og'
+   str[0] === 'd'
+   so ...
+   revStr('dog') returns revStr('og')+'d';
+   revStr('og') return revStr('g' ) + 'o';
+   revStr('g') return revStr('') + 'g';
+   revStr('') return '' ; 
+
+   Since the above are NESTED function calls ... the inner function return first.
+   So when we unwind the group of functions =>
+   1 revStr('') returns '' => '';
+   2 revStr('g') returns revStr('') + 'g' =>'g'
+   3 revStr('og') returns revStr('g') + 'o' => 'go' 
+   4 revStr('dog') returns revStr('go') +'d' => 'god'
+   5  
+*/

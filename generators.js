@@ -68,4 +68,11 @@ console.log(gen.next()); // {value: undefined, done: true} - all next() calls af
     iterations are needed. To solve this problem it is enough to create an infinite loop in the function generator
 */
 // Example of a function returning a random number
+function * randomNumberFrom(...arr){
+   while(true){
+      yield arr[Math.floor(Math.random()*arr.length)];
+   }
+}
 
+const getRandomNumber = randomNumberFrom(1,34,2,58,680);
+console.log(getRandomNumber.next().value); 

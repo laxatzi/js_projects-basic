@@ -14,9 +14,8 @@
            transition: .3s ease;
            background: steelblue;
         }
-        .string .darker {
+        .string.darker {
            background: #343434;
-           filter: blur(10px);
         }
 
         #btn {
@@ -48,5 +47,29 @@
    <div class="string"></div>
    <div class="string"></div>
    <div id="btn">Click Me!</div>
+<!-- javascript -->
+<script>
+   // store values
+   const strings = document.querySelectorAll('.string');
+   const btn = document.querySelector('#btn');
+   const className = 'darker';
+
+   // create the generator
+   function * addClassToElements(elements, className){
+      for(const element of Array.from(elements)){
+         yield element.classList.add(className);
+      }
+   }
+
+   // store generator
+   const addClassToStrings = addClassToElements(strings, className); 
+
+   // add event 
+   btn.addEventListener('click', function(element){
+      if(addClassToStrings.next().done){
+         element.target.classList.add(className);
+      }
+   })
+</script>
 </body>
 </html>

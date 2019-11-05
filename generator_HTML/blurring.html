@@ -5,7 +5,38 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Click to blur--Generator example</title>
-   
+   <!-- Styles -->
+   <style>
+        .string {
+           width: 50vw;
+           height: 8vh;
+           margin: 20px auto;
+           transition: .3s ease;
+           background: steelblue;
+        }
+        .string .darker {
+           background: #343434;
+           filter: blur(10px);
+        }
+
+        #btn {
+           position: absolute;
+           padding: 10px 15px;
+           color: #d6d6d6;
+           font-size: 20px;
+           font-family: Arial, Helvetica, sans-serif;
+           background: #373737;
+           border-radius: 5%;
+           top: 10px;
+           left: 80vw;
+           transition: .3s ease;
+           cursor: pointer;
+        }
+        #btn:hover,
+        #btn:active {
+           box-shadow: 10px 10px 10px grey;
+        }
+   </style>
 </head>
 <body>
    <div class="string"></div>

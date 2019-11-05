@@ -62,9 +62,10 @@ console.log(gen.next()); // {value: undefined, done: true} - all next() calls af
 
 //Return() will ignore any code in the generator function that you have. But will set the value based on a passed argument and set done to be true. Any calls next() after return() will return done-object.
 
-// Custom Methods
-
-function * generator(){
-   yield 1;
-}
+// Use of generators
+/*
+    Previously, we used generators with a KNOWN number of iterations. But what if we don't know how many
+    iterations are needed. To solve this problem it is enough to create an infinite loop in the function generator
+*/
+// Example of a function returning a random number
 

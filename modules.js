@@ -60,4 +60,6 @@ var global = "I'm a global variable!";
     With this construct, our anonymous function has its own evaluation environment or "closure", and then we immediately evaluate it. This lets us hide variables form the global namespace.
     We can use local variables inside this function without accidentally overwrite existing global variables, yet still access the global variables - as shown in the third console.log
 */
-
+/*
+   Note that the parenthesis around the anonymous function are required, because statements that begin with the keyword function are always considered to be function declarations (remember, you can’t have unnamed function declarations in JavaScript.) Consequently, the surrounding parentheses create a function expression instead
+*/

@@ -98,4 +98,10 @@ myModuleInstance.hello(); // hello
 myModuleInstance.goodbye(); // 'goodbye'
 
 // Benefits of CommonJS approach: 
-// 1. Avoid global namespace 
+// 1. Avoid global namespace pollution
+//2.  Make our dependencies explicit
+// 3. The syntax is very compact
+
+// CommonJS is all well and good, but what if we want to load modules asynchronously? The answer is called Asynchronous Module Definition, or AMD for short.
+
+// AMD

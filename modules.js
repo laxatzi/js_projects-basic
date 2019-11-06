@@ -105,3 +105,13 @@ myModuleInstance.goodbye(); // 'goodbye'
 // CommonJS is all well and good, but what if we want to load modules asynchronously? The answer is called Asynchronous Module Definition, or AMD for short.
 
 // AMD
+// Loading Modules using AMD looks something like this:
+
+define(["myModule", "myOtherModule"], function(myModule, myOtherModule) {
+   console.log(myModule.hello());
+});
+
+// explain the above code
+/*
+
+*/

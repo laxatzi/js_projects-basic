@@ -34,3 +34,32 @@
    The Parser knows which is which, depending on the CONTEXT 
    In the example, the second is an EXPRESSION coz the 'comma operator' can handle ONLY Expressions
 */
+
+
+function twoPlusTwo(){
+   alert(2+2);
+}();
+
+// the above code is still wrong with the given name identifier.
+/*
+    the Parser sees it as a function declaration followed by an unrelated grouping operator that contains NO EXPRESSION, and according to JS syntax, grouping ops MUST contain an expression
+*/
+
+/*
+
+   Another thing I'd like to point out that may be of some use to some people is that any name identifier you provide for a function expression is pretty much useless in the context of the code except from within the function definition itself.
+*/
+
+var a = function b(){
+   // code here
+}
+
+a(); // works
+b(); // does NOT work
+
+// But
+var c = function d(){
+   window.setTimeout(d, 2000); // it works
+}
+
+// * although name identifiers doesn't play a role on how the code works in function expression...it is always helpful on debugging code

@@ -63,3 +63,25 @@ var c = function d(){
 }
 
 // * although name identifiers doesn't play a role on how the code works in function expression...it is always helpful on debugging code
+
+// EXPANDING ON defining Functions 
+
+// Function Constructor
+var multiply = new Function('x', 'y', 'return x * y;');
+
+// Function declaration
+function multiply(x,y){
+   return x*y;
+}
+
+// anonym function expression assigned to variable
+var multiply = function(x,y){
+   return x*y;
+}
+
+// named function expression assigned to variable
+
+var multiply = function multiplyParams(x,y){
+   return x*y;
+}
+

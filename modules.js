@@ -34,7 +34,7 @@ They can be shuffled, removed or added when appropriate without disturbing the p
 
 */
 // anonymous closure
-
+var global = "I'm a global variable!";
 (function(){
    //we keep this variables private inside this closure scope
    var myGrades = [17, 15, 19, 14, 17];
@@ -51,10 +51,13 @@ They can be shuffled, removed or added when appropriate without disturbing the p
       });
       return "You failed "+ failingGrades.length +" times in your goal!";
    }
+   console.log(averageGrade());//16.4
    console.log(failing()); // You failed two times
-
+   console.log(global); // I'm a global variable!
 }());
 
 /*
-    With this construct, our anonymous function has its own evaluation environment or "closure", and then we immediately evaluate it. This lets us hide variables form the global namespace
+    With this construct, our anonymous function has its own evaluation environment or "closure", and then we immediately evaluate it. This lets us hide variables form the global namespace.
+    We can use local variables inside this function without accidentally overwrite existing global variables, yet still access the global variables - as shown in the third console.log
 */
+

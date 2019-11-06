@@ -21,4 +21,40 @@ They can be shuffled, removed or added when appropriate without disturbing the p
    3.Reusability
 */
 
-//
+//How to incorporate modules into our program?
+/*
+   1. Module pattern
+
+   The Module pattern is used to mimic the concept of classes, since javascript does not natively supports classes, so that we can store both public and private methods and variables inside a single object.
+   This resembles the way classes are used in other programming langs like Java and Python.
+   We now can create a public facing API for the methods we want to expose to the world, while, at the same time, we still encapsulating private variables and methods in a closure scope.
+   We can accomplish the creation of a module pattern with the use of an anonymous closure, that will help us putt our code in an anonymous function.
+   Remember that in Javascript, functions are the only way to create new scope
+
+
+*/
+// anonymous closure
+
+(function(){
+   //we keep this variables private inside this closure scope
+   var myGrades = [17, 15, 19, 14, 17];
+
+   var averageGrade = function(){
+      var total = myGrades.reduce(function(sum, item){
+         return sum + item
+      },0);
+      return "Your average grade is "+ total/myGrades.length +"!";
+   }
+   var failing = function(){
+      var failingGrades = myGrades.filter(function(item){
+         return item < 17;
+      });
+      return "You failed "+ failingGrades.length +" times in your goal!";
+   }
+   console.log(failing()); // You failed two times
+
+}());
+
+/*
+    With this construct, our anonymous function has its own evaluation environment or "closure", and then we immediately evaluate it. This lets us hide variables form the global namespace
+*/

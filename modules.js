@@ -129,3 +129,11 @@ define(["myModule", "myOtherModule"], function(myModule, myOtherModule) {
       }
    }
  });
+
+ /*
+   So, AMD takes a browser first approach, unlike CommonJS, alongside async behavior to get the job done.
+   Aside from asynchronicity, another benefit of AMD is that your modules can be, objects, constructors, functions, strings, JSON, and many other types, While, CommonJS ONLY supports, objects as modules.
+
+   That being said, AMD isn't compatible with filesystem, io, and other server oriented features, that are available via CommonJS, and syntax is a bit more verbose.
+
+ */

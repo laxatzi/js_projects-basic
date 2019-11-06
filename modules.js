@@ -63,3 +63,39 @@ var global = "I'm a global variable!";
 /*
    Note that the parenthesis around the anonymous function are required, because statements that begin with the keyword function are always considered to be function declarations (remember, you can’t have unnamed function declarations in JavaScript.) Consequently, the surrounding parentheses create a function expression instead
 */
+// There are other module patter approaches (we wont see them here) that all have one thing in common: The use of a single global variable to wrap its code into a function, thereby creating a private namespace for itself using a closure scope.
+// There are ways to ask for a module's interface without going through the global scope:
+// CommonJS and AMD
+
+// 2. CommonJS
+
+/*
+   A commonJS module is essentially a reusable piece of javascript which exports specific objects,
+   making them available for other modules to REQUIRE in their programs.
+   With commonJS, each javascript file stores modules in its own unique module context just like wrapping it in a closure.
+   In this scope, we use the module.exports object to expose modules, and 'require' to import them. 
+*/
+
+function myModule(){
+   this.hello = function(){
+      return 'hello';
+   }
+   this.goodbye = function(){
+      return 'goodbye';
+   }
+}
+
+module.exports = myModule;
+
+// we use the special object module and place a reference of our func into modules.exports.
+// this lets the CommonJS system know what we want to expose so that other files can consume it.
+
+// then when someone wants to use myModule, they can require it in their file
+
+var myModule = require('myModule');
+var myModuleInstance = new myModule();
+myModuleInstance.hello(); // hello
+myModuleInstance.goodbye(); // 'goodbye'
+
+// Benefits of CommonJS approach: 
+// 1. Avoid global namespace 

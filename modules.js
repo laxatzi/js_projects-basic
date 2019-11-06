@@ -113,5 +113,19 @@ define(["myModule", "myOtherModule"], function(myModule, myOtherModule) {
 
 // explain the above code
 /*
+   What is happening here is that the 'define' function takes as its first argument an array of each module's dependencies. These dependencies, are loaded in the background, and once loaded 'define' calls the callback function it was given.
+   Next, the callback function takes, as arguments, the dependencies that were loaded. In our case 'myModule' and 'myOtherModule', allowing the function to use these dependencies. 
+   Finally the dependencies themselves must also be defined using the 'define' keyword.
 
 */
+ // for example 'myModule' might look like this:
+ define([], function(){
+   return {
+      hello: function(){
+         console.log('hello');
+      },
+      goodbye: function(){
+         console.log('goodbye');
+      }
+   }
+ });

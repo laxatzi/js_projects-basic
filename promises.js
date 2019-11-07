@@ -1,3 +1,10 @@
+//PROMISES
+/*
+   A promise in javascript is exactly what it sounds like- you use it to make a promise to do something
+   usually asynchronously.
+   When the tasks completes, you either fulfill your promise or fail to do so.
+   Promise is a constructor function, so you need to use the 'new' keyword to create one. It takes a function, as its argument, with two params- 'resolve' and 'reject'. This are methods used to determine the outcome of the promise.
+*/
 // Example of a Promise constructor
 
 const myPromise = new Promise(
@@ -47,6 +54,25 @@ myPromise.then(whenResolved, whenRejected);
    To ensure that promises doesn't fire immediately we wrap them in a function
 */
 
-// Catching promises
+// Handle a fulfilled Promise with then.
+
+/*
+    Promises are most useful when you have a process that takes an unknown amount of time in
+    your code (i.e something asynchronous), often a server request.
+    When you make a server request it takes some amount of time, and after it completes you usually 
+    want to do something with the response from the server.
+    This can be achieved by using the 'then' method. The 'then' method is executed immediately after 
+    your promise is fulfilled with 'resolve'.
+*/
+// example
+myPromise.then(result => {
+   // do something
+})
+
+// 'result' comes from the argument given to the 'resolve' method.
+
+// exercise
+// Add the 'then' method to your promise. Use result as the parameter of its callback function and log 
+// 'result' to the consol.
 
 

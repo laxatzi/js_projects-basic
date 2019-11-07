@@ -32,7 +32,7 @@ console.log(factorial(3)); // 6
        factorial(0) returns 1
        factorial(1) returns 1* factorial(0), or just 1*1
        factorial(2) returns 2* factorial(1), or just 2*1*1
-       factorial(3) returns 3* factorial(2, of 3*2*1*1 = 6
+       factorial(3) returns 3* factorial(2), or just 3*2*1*1 = 6
 */
 
 //EXAMPLE 2: REVERSING A STRING
@@ -50,9 +50,9 @@ console.log(revStr('dog'));// god
    str[0] === 'd'
    so ...
    revStr('dog') returns revStr('og')+'d';
-   revStr('og') return revStr('g' ) + 'o';
-   revStr('g') return revStr('') + 'g';
-   revStr('') return '' ; 
+   revStr('og') returns revStr('g' ) + 'o';
+   revStr('g') returns revStr('') + 'g';
+   revStr('') returns '' ; 
 
    Since the above are NESTED function calls ... the inner function return first.
    So when we unwind the group of functions =>
@@ -108,6 +108,14 @@ function rangeOfNums(startNum, endNum){
 
 console.log(rangeOfNums(3,6)); //[3,4,5,6]
 
+// the above code doesn't include neg numbers
+// The below code include both neg and positive numbers
+  function rangeOfNumbers(startNumber, endNumber){
+     if(endNumber - startNumber === 0 ) return [startNumber];
+     else {
+        return rangeOfNumbers(startNumber, endNumber-1).concat(endNumber);
+     }
+  }
 
 // Exercise
 /*

@@ -72,6 +72,7 @@ myPromise.then(result => {
 // 'result' comes from the argument given to the 'resolve' method.
 
 // exercise
+
 // Add the 'then' method to your promise. Use result as the parameter of its callback function and log 
 // 'result' to the consol.
 
@@ -90,3 +91,46 @@ const makeServerRequest = new Promise((resolve, reject) =>{
 makeServerRequest.then(result => {
    console.log(result); 
 });
+
+// Add the 'catch' method 
+/*
+    This method is used when our promise is rejected.
+    It is executed immediately after a promise's 'reject' method is called.
+    Syntax: 
+    myPromise.catch(error => {
+      // do something with the error
+    });
+*/
+
+// error is the argument passed in to the 'reject' method.
+// 'then' and 'catch' methods can be chained to the promise declaration if you chose.
+
+// exercise
+// Add the 'catch' method to your Promise. Use 'error' as the parameter of its callback function
+// and log 'error' to the console.
+
+const makeServerRequest = new Promise((resolve, reject) => {
+   // responseFromServer is set to false in order to represent an unsuccessful response from the server
+
+   let responseFromServer = false;
+
+   if(responseFromServer){
+      resolve("We got the data!");
+   }
+   else{
+      reject("Where is the data? Date not received");
+   }
+});
+
+   // add the 'then' method here
+         makeServerRequest.then(result => {
+            console.log(result); 
+         });
+   // add the 'catch' method here
+
+         makeServerRequest.catch(error => {
+            console.log(error);
+         });
+
+
+

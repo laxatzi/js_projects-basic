@@ -79,4 +79,10 @@ console.log(myPets); // ['Rocky','Milly','Zizzel','Lukas'];
     }
   ];*/
 
-  
+
+  function onlyBabies(pet){
+   return pet.age < 3;
+}
+
+let babyDogNames = pets.filter(onlyDogs).filter(onlyBabies).map(nameOnly);
+console.log(babyDogNames); // ['Rocky'];

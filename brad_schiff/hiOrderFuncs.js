@@ -24,8 +24,7 @@
       console.log(tripleMe(5)); // 15
       console.log(tenTimesMe(5));// 50
 
-// higher order function : map()
-    // example
+// native higher order functions 
 
    let pets = [
       { 
@@ -48,12 +47,36 @@
           age: 5,
           species: "Cat"
        }
-   ]
+   ];
 
-  let myPets =  pets.map(nameOnly);
+//  map()
+    // example
+let myPets =  pets.map(nameOnly);
 
    function nameOnly(pet){
       return pet.name;
    }
 console.log(myPets); // ['Rocky','Milly','Zizzel','Lukas'];
    
+// filter()
+    // example
+ let dogs = pets.filter(dogsOnly);
+
+  function dogsOnly(pet){
+     return pet.species == "Dog";
+  }
+
+  console.log(dogs); /* [
+   { 
+      name: "Rocky",
+      age: 2,
+      species: "Dog"
+    },
+    {
+      name : "Milly",
+      age: 5,
+      species: "Dog"
+    }
+  ];*/
+
+  

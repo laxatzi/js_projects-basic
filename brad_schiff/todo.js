@@ -10,6 +10,7 @@ todo_form.addEventListener('submit', (evt)=>{
 });
 
 // create item to list
-function createItem(obligation){
+function createItem(par){
+   let obligation = `<li>${par} <button>Delete</button></li>`;
    todo_list.insertAdjacentHTML('beforeend', obligation);
 }

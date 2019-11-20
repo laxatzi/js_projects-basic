@@ -7,6 +7,8 @@ let todo_list = document.getElementById('todo_list');
 todo_form.addEventListener('submit', (evt)=>{
     evt.preventDefault();
     createItem(todo_input.value);
+    todo_input.value = "";
+    todo_input.focus();
 });
 
 // create item to list

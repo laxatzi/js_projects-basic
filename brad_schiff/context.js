@@ -33,4 +33,4 @@ let drivingL = {
     console.log(this.firstName +" "+this.lastName+" just inhale and exhale!");
  }
 
- breathe.call(drivingL); // the call method is giving us a chance to control the this environment before executing a function..in the example this keyword points towards drivingL 
+ breathe.call(drivingL); // the call method is giving us a chance to control the this environment before executing a function..in the example this keyword points towards drivingL     

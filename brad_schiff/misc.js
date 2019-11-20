@@ -8,6 +8,9 @@ let doubledNums = myNums.map(function(n){
 let doubledNums = myNums.map((n)=> n * 2 );
 console.log(doubledNums); // [40, 200, 68, 136]
 
-
-
+// Template Literals
+let myname = 'Lambros';
+console.log("Hello my name is "+myname+" and i'm a student of javascript!"); 
+// the above statement can be easily written with template literals
+console.log(`Hello my name is ${myname}, and i'm a student of javascript`);
 

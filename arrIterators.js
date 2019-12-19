@@ -24,7 +24,7 @@ console.log(numbers.map(square));
 console.log(numbers.reduce(function(prev, next){
    return prev + next;
 }, 10) // second parameter defines initial value
-); // 29
+); // 39
 
 
 

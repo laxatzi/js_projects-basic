@@ -8,6 +8,10 @@
    function sortNumbs(a,b){
       return a-b;
    }
-
+   var sortedNumbers = numbers.sort(sortNumbs);
+   var evenNumbers = sortedNumbers.filter(function(n){
+      return n % 2 === 0; // return even numbers
+   });
    // so now we can insert the sortNumbs() function as a callback
-   console.log(numbers.sort(sortNumbs));
+   console.log(sortedNumbers);
+   console.log(evenNumbers);

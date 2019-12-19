@@ -10,3 +10,19 @@ for(var j=0; j<colors.length; j++){
 newColors.forEach(function(color, index){
    console.log("Color at position "+ index +" is color "+color);
 })
+//map() method
+//the map() method iterates over an array and takes a callback function as a parameter that is invoked on each item in the array.
+
+var numbers = [4, 9, 16];
+function square(n){
+   return Math.sqrt(n);
+}
+
+console.log(numbers.map(square));
+console.log(numbers.reduce(function(prev, next){
+   return prev + next;
+})
+); // 29
+
+
+

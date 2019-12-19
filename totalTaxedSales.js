@@ -8,5 +8,5 @@ var totalTaxedSales = sales.map(function(sale){
 }).reduce(function(prev,next){
     return prev + next;
 }, 0);
-console.log(toPrecision(totalSales)); // 398
-console.log(toPrecision(totalTaxedSales));   // 457.69
+console.log(totalSales.toFixed(2)); // 398
+console.log(totalTaxedSales.toFixed(2));   // 457.69

@@ -19,6 +19,8 @@ function square(n){
 }
 
 console.log(numbers.map(square));
+// reduce() method
+// the reduce() method iterates like the map method but this time it cumulatively combines each result to return a single value. 
 console.log(numbers.reduce(function(prev, next){
    return prev + next;
 })

@@ -23,7 +23,7 @@ console.log(numbers.map(square));
 // the reduce() method iterates like the map method but this time it cumulatively combines each result to return a single value. 
 console.log(numbers.reduce(function(prev, next){
    return prev + next;
-})
+}, 10) // second parameter defines initial value
 ); // 29
 
 

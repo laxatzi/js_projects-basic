@@ -14,4 +14,4 @@
    });
    // so now we can insert the sortNumbs() function as a callback
    console.log(sortedNumbers);
-   console.log(evenNumbers);
+   console.log(evenNumbers);// select even numbers from the sortedNumbers array list

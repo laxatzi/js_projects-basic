@@ -15,3 +15,5 @@
 
   console.log(greet({age: 40})); // Hello!! My name is Lambros and i am 40 years old!
 
+  console.log(greet({age: 0})); // Hello!! My name is Lambros and i am 30 years old!
+  // default value is used since 0 is falsy

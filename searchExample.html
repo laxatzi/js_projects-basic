@@ -8,13 +8,16 @@
    <style>
        form {
           display: block;
-          width: 300px;
+          width: 80%;
           padding: 10px;
           margin: 100px auto;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
        }
-       form input[type="text"] {
+       form input[type="text"], form label {
           font-size: 1rem;
           padding: 10px;
+          }
+       form input[type="text"]{
           border: 1px solid crimson;
           border-radius: 5px;
        }
@@ -23,12 +26,27 @@
           padding: 10px;
           border: 1px solid crimson;
           border-radius: 5px;
+          float: left;
+          clear: both;
+          margin-top: 20px;
        }
+     
+       
    </style>
 </head>
 <body>
-   <form action="search" name="search">
-      <input type="text" name="searchBox" placeholder="Enter your query">
+   <form action="search" name="search" id="hero">
+      <label for="name" class="break">Search the hero:</label>
+      <input type="text" name="searchBox" placeholder="Enter hero name" maxlength="20" id="name">
+      <p>Super Powers</p>
+      <div class="powers">      <label for="flight">Flight:</label>
+      <input type="checkbox" value="Flight" name="powers" id="flight">
+      <label for="strength">Super Strength:</label>
+      <input type="checkbox" value="Strength" name="powers" id="strength">
+      <label for="super_speed">Super Speed:</label>
+      <input type="checkbox" name="powers" value="Super Speed" id="super_speed">
+   </div>
+
       <button type="submit" name="button">Search</button>
    </form>
    <script src="searchExample.js"></script>

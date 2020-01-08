@@ -31,25 +31,61 @@ const mouse = document.getElementById('mouse');
    mouse.addEventListener('mouseout', highlight);
 
    // which character was pressed
-   addEventListener('keypress', function(evt){
-      console.log("You pressed the "+ String.fromCharCode(evt.charCode) + " character");
-   })
-   addEventListener('keydown', function(evt){
-      if(evt.keyCode === 32) console.log("fire!");
-   })
+         addEventListener('keypress', function(evt){
+            console.log("You pressed the "+ String.fromCharCode(evt.charCode) + " character");
+         })
+         addEventListener('keydown', function(evt){
+            if(evt.keyCode === 32) console.log("fire!");
+         })
 
-   const once = document.getElementById('once');
+         const once = document.getElementById('once');
 
-  once.addEventListener('click', remove);
+      once.addEventListener('click', remove);
 
-  function remove(evt){
-     console.log("it want last!");
-     once.style.backgroundColor = "yellow";
-     once.removeEventListener('click', remove);
-  }
+      function remove(evt){
+         console.log("it want last!");
+         once.style.backgroundColor = "yellow";
+         once.removeEventListener('click', remove);
+      }
 
   const broken = document.getElementById('broken');
   broken.addEventListener('click', function(evt){
      evt.preventDefault();
      console.log("Link is broken!");
   })
+
+  const list = document.getElementById('list');
+  const li = document.querySelector("#list li");
+
+/*  
+//capturing
+     // list
+       list.addEventListener("click", function(evt){
+          console.log("clicked on list");
+       }, true);
+     // li
+         li.addEventListener('click', function(evt){
+         console.log("clicked on li");
+      }, true);
+
+  //bubbling 
+    //list
+      list.addEventListener('click', function(evt){
+         console.log("clicked on list");
+     });
+
+      //li 
+        li.addEventListener('click', function(evt){
+           console.log("clicked on  li");
+        });
+   */
+list.addEventListener('click', function(evt){
+   console.log("click on list!");
+});
+li.addEventListener('click', function(evt){
+   console.log('clicked on li again!');
+   evt.stopPropagation(); // stop bubbling from occurring...'click on list' wont show
+});
+
+
+list.addEventListener('click', highlight);

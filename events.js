@@ -26,3 +26,6 @@ const mouse = document.getElementById('mouse');
    function highlight(evt){
       evt.target.classList.toggle('highlight');
    }
+
+   mouse.addEventListener('mouseover', highlight);
+   mouse.addEventListener('mouseout', highlight);

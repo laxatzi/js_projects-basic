@@ -37,3 +37,19 @@ const mouse = document.getElementById('mouse');
    addEventListener('keydown', function(evt){
       if(evt.keyCode === 32) console.log("fire!");
    })
+
+   const once = document.getElementById('once');
+
+  once.addEventListener('click', remove);
+
+  function remove(evt){
+     console.log("it want last!");
+     once.style.backgroundColor = "yellow";
+     once.removeEventListener('click', remove);
+  }
+
+  const broken = document.getElementById('broken');
+  broken.addEventListener('click', function(evt){
+     evt.preventDefault();
+     console.log("Link is broken!");
+  })

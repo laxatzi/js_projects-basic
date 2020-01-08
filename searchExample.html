@@ -6,53 +6,77 @@
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Searching Example</title>
    <style>
-       form {
-          display: block;
-          width: 80%;
+      .wrapper {
+         background-color: whitesmoke;
+         list-style-type: none;
+         padding: 10px;
+         border-radius: 3px;
+         width: 50%;
+         margin: 0 auto;
+      }
+      .wrapper li {
+       display: flex;
+       width: 80%;
+       margin: 0 auto;
+      }
+      .form_row {
+         display: flex;
+         justify-content: flex-end;
+         align-items: center;
+         padding: .5em;
+      }
+      .form_row > label {
+         padding: .5rem 0;
+      }
+      .form_row > input {
+         flex: 5;
+      }
+      .form_row > input,
+      .form-row > button {
+         padding: .5em;
+      }
+      .form_row > button {
+         font-size: 1rem;         
           padding: 10px;
-          margin: 100px auto;
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-       }
-       form input[type="text"], form label {
-          font-size: 1rem;
-          padding: 10px;
-          }
-       form input[type="text"]{
-          border: 1px solid crimson;
           border-radius: 5px;
-          margin: 0;
-       }
-       form button {
-          font-size: 1rem;         
-          padding: 10px;
-          border: 1px solid crimson;
-          border-radius: 5px;
-          float: left;
-          clear: both;
           margin-top: 20px;
-       }
-     
-       
+      }
+ 
    </style>
 </head>
 <body>
    <form action="search" name="search" id="hero">
-      <label for="name" class="break">Search the hero:</label>
-      <input type="text" name="searchBox" placeholder="Enter hero name" maxlength="20" id="name">
-      <p>Super Powers</p>
-      <div class="powers">
-      <label for="immortality">Immortality</label> 
-      <input type="checkbox" value="Immortality" name="powers" id="immortality">     
-      <label for="flight">Flight:</label>
-      <input type="checkbox" value="Flight" name="powers" id="flight">
-      <label for="strength">Super Strength:</label>
-      <input type="checkbox" value="Strength" name="powers" id="strength">
-      <label for="super_speed">Super Speed:</label>
-      <input type="checkbox" name="powers" value="Super Speed" id="super_speed">
-   </div>
-
-      <button type="submit" name="button">Search</button>
+      <ul class="wrapper">
+         <li class="form_row">
+            <label for="name" class="break">Search the hero:</label>
+            <input type="text" name="searchBox" placeholder="Enter hero name" id="name">
+         </li>
+   
+         <li class="form_row">
+            <label for="immortality">Immortality</label> 
+            <input type="checkbox" value="Immortality" name="powers" id="immortality">     
+            <label for="flight">Flight:</label>
+            <input type="checkbox" value="Flight" name="powers" id="flight">
+            <label for="strength">Super Strength:</label>
+            <input type="checkbox" value="Strength" name="powers" id="strength">
+            <label for="super_speed">Super Speed:</label>
+            <input type="checkbox" name="powers" value="Super Speed" id="super_speed">
+         </li>
+         <li class="form_row">
+            <label>Hero: </label>
+            <input type="radio" name="radio_type" value="Hero">
+            <label>Villain:</label>
+            <input type="radio" name="radio_type" value="Villain">
+            <label>Anti-Hero</label>
+            <input type="radio" name="radio_type" value="Anti-Hero">
+         </li>
+         <li class="form_row">
+           <button type="submit" name="button">Search</button>
+         </li>
+      </ul>
    </form>
    <script src="searchExample.js"></script>
 </body>
 </html>
+
+

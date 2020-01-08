@@ -28,4 +28,19 @@ for(let i =0; i < form.powers.length; i++){
 }
 
 // make immortality a standard power
-document.forms.hero.powers[0].checked = true;// remember that 'forms' is a native method 
+document.forms.hero.powers[0].checked = true;// remember that 'forms' is a native method ...here we check checkbox field by default... in html5 the equivalent is 'checked'
+
+// radio buttons
+// only one button can be checked in a group that has the same name
+// we can access all the radio buttons in that group using one name
+
+form.radio_type;
+// since it is an array-like object we can use bracket notation to access each individual button
+form.radio_type[1];
+
+// each radio button has a value property that is equal to its value attr ... we can use this to set a name attr property to the radio button that is selected
+
+for(let i = 0; i<form.radio_type.length; i++){ // iterate through radio buttons to see which is checked
+   if (form.radio_type[i].checked) hero.radio_type = form.radio_type[i].value; // if checked ...
+   break; // escape loop since there is no point of checking for another value...only one in radio buttons
+}

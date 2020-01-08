@@ -20,6 +20,7 @@
        form input[type="text"]{
           border: 1px solid crimson;
           border-radius: 5px;
+          margin: 0;
        }
        form button {
           font-size: 1rem;         
@@ -39,7 +40,10 @@
       <label for="name" class="break">Search the hero:</label>
       <input type="text" name="searchBox" placeholder="Enter hero name" maxlength="20" id="name">
       <p>Super Powers</p>
-      <div class="powers">      <label for="flight">Flight:</label>
+      <div class="powers">
+      <label for="immortality">Immortality</label> 
+      <input type="checkbox" value="Immortality" name="powers" id="immortality">     
+      <label for="flight">Flight:</label>
       <input type="checkbox" value="Flight" name="powers" id="flight">
       <label for="strength">Super Strength:</label>
       <input type="checkbox" value="Strength" name="powers" id="strength">

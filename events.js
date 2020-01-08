@@ -29,3 +29,11 @@ const mouse = document.getElementById('mouse');
 
    mouse.addEventListener('mouseover', highlight);
    mouse.addEventListener('mouseout', highlight);
+
+   // which character was pressed
+   addEventListener('keypress', function(evt){
+      console.log("You pressed the "+ String.fromCharCode(evt.charCode) + " character");
+   })
+   addEventListener('keydown', function(evt){
+      if(evt.keyCode === 32) console.log("fire!");
+   })

@@ -44,3 +44,20 @@ for(let i = 0; i<form.radio_type.length; i++){ // iterate through radio buttons 
    if (form.radio_type[i].checked) hero.radio_type = form.radio_type[i].value; // if checked ...
    break; // escape loop since there is no point of checking for another value...only one in radio buttons
 }
+
+// usability feedback
+form.name.addEventListener("blur", validate, false);
+function validate(evt){
+   // get the first letter on the name input 
+   let firstLetter = form.name.value[0];
+   // get ref to the label for the name input
+   let label = document.querySelector('label[for="name"]');
+   if(firstLetter.toUpperCase() === "X"){
+      label.classList.add('error');
+      label.textContent = "'X' cannot be the first letter of a name!";
+   }else{ // error has NOT happened/ error has been FIXED
+      label.classList.remove('error');
+      label.textContent = "Name: ";
+   }
+}
+

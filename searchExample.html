@@ -41,7 +41,15 @@
           border-radius: 5px;
           margin-top: 20px;
       }
- 
+      .form_row { display: flex; }
+     .form_row input[type="number"] {
+          flex: 1;
+          
+     }
+     .form_row label.age {
+        flex: 3;
+        text-align: right;
+     }
    </style>
 </head>
 <body>
@@ -80,6 +88,14 @@
                <option value="Coast City">Coast City</option>
                <option value="Star City">Star City</option>
             </select>
+         </li>
+         <li class="form_row">
+            <label for="origin" class="break">Origin Story: </label>
+            <textarea id="origin" name="origin"  rows="20" cols="60"  placeholder="Fill your input in..."></textarea>
+         </li>
+         <li class="form_row">
+            <label for="age" class="age">Age</label>
+            <input type="number" name="age" min="0" value="20">
          </li>
          <li class="form_row">
            <button type="submit" name="button">Search</button>

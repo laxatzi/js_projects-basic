@@ -2,7 +2,6 @@
 const form = document.forms['search'];
 const input = form['searchBox'];
 const button = form['button'];
-
 // form events ...events exclusive for forms
   input.addEventListener('focus', function(){console.log('focused!'), false});
   input.addEventListener('blur', function(){console.log('blurred!')}, false);

@@ -33,3 +33,17 @@ class Republic {
 
 const hellas = new Republic("Greece", 1821, "blue and white");
 hellas.describe();
+
+// This in DOM 
+// there is a special 'this' context for event handlers. If an event handler is called by an eventListener, 'this' will refer to 'event.currentTarget'.
+// Usually devs will simply use 'event.target' or 'event.currentTarget' to access elements in the DOM, but 'this' would also do.
+
+// example:
+
+const button = document.createElement('button');
+button.textContent = 'Click me';
+document.body.append(button);
+
+button.addEventListener('click', function(e){
+   console.log(e.target);
+})

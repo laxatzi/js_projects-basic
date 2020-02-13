@@ -9,11 +9,16 @@
 // usually this happens when we are doing I/O e.g talking to databases, downloading things, reading files etc
 
 // example of a normal function
+function multiplyTwoNumbs(a,b){
+   return a *b;
+}
 var result = multiplyTwoNumbs(5,10);
 console.log(result); // 50
 
 // However, async functions use callbacks and dont return anything right away
-
+function downloadPhoto(arg){
+   return arg
+}
 var photo = downloadPhoto('http//site.com/cat.gif');
 console.log(photo); // undefined
 
@@ -41,3 +46,17 @@ console.log('Download started');
 // So it is important to understand that the order things happening does not read top-to-bottom. 
 // It is task completion that defines the order of execution
 
+// Callbacks can be used to build more generalized functions. Instead of having lots of specific functions, one function can be written that accepts a callback. 
+//example
+function random(a,b,callback){
+   if(b===undefined) b=a, a=1; // if only one arg, then that arg = upper limit and base defined as 1
+   let result = Math.floor((b-a+1)*Math.random())+a;
+   if(typeof callback === "function"){
+      result = callback(result);
+   }
+   return result;
+}
+function double(n){
+   return n*2;
+}
+console.log(random(4,5,double));

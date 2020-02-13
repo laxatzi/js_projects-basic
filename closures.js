@@ -41,6 +41,19 @@ function closure(){
 var createdOutside = closure();
 console.log(createdOutside); // created inside; --works fine
 
+// a function can form a closure that maintains access to all the variables created in the original function's scope by returning a function instead of a single value
+// example
+function toFahrenheit(){
+   var a= 1.8;
+   var b = 23;
+   return function(c){
+      return c*a + b;
+   }
+} // and of function
+// Now a new function can be created by invoking this function and assigning the return value to a variable. This new function can then be invoked with its own argument, but the variables inside the higher function are still remembered
 
+var calcCtoF = toFahrenheit();
+console.log(calcCtoF(30)); // 77
+console.log(calcCtoF(4)); //30.2
 
 

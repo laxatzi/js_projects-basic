@@ -69,3 +69,18 @@ console.log(count());//10
 console.log(count());//11
 console.log(count());//12
 
+// example of multiplier function
+// here we create a closure around the arguments provided to the function
+
+function multiplier(x){
+   return function(y){
+      return x * y;
+   }
+}
+
+const doubler = multiplier(2);
+console.log(doubler(10)); // 20 --doubles every single argument that is provided with
+const timesThree = multiplier(3);
+console.log(timesThree(4)); // 12 -- triples every single argument  that is provided with
+
+// multiplier function is a generic abstraction that can be used to build more specific abstractions

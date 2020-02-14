@@ -30,8 +30,8 @@
 
  // Example of a Function Expression
    // function expressions are not hoisted 
-      console.log(funExpr()); // TypeError: funExpr is not a function
-      var funExpr = function() { return 5; }
+     // console.log(funExpr()); // TypeError: funExpr is not a function
+     //   var funExpr = function() { return 5; }
 
 // Example of a Function Declaration
   // function declarations are hoisted
@@ -56,5 +56,46 @@
    }()); // end of IIFE
 
    console.log(a); // 2
-   console.log(b) // 1
-   console.log(varInExpr); // ReferenceError: varInExpr is not defined
+   console.log(b); // 1
+   // console.log(varInExpr); // ReferenceError: varInExpr is not defined
+
+// examples of IIFE uses
+
+  // Code initialization
+     // With IIFE we initialize code that will only run once. So there is no need to create reusable code blocks. 
+     // Bellow function logs a welcome message to the console. Then it eliminates the temp variables
+     (function() { 
+        var name = "Maria"; // supposedly name is obtained from a cookie
+        var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        var date = new Date(); 
+        var today = days[date.getDay()];
+       console.log("Welcome back "+name+". Today is "+ today);
+     }()); // end of IIFE
+   
+  // Safe Use of Strict Mode
+     //Placing "strict use"; at the beginning of a file will enforce strict mode on all code in the file, and if you are using other peoples code there is no guarantee that they have coded in strict mode. To avoid this use strict mode in an IIFE
+
+      (function(){
+         "use strict";
+         // code here
+
+      }());// end of IIFE
+  // Self-contained Modules
+      /* 
+         Use IIFE to create self-contained modules of code -- private scope 
+      */
+       // module A
+      (function(){
+        
+            var name = "Anthony";
+            console.log("Hello from "+name);
+      }()); // end of IIFE
+      // Module B
+      (function(){
+         var name = "Brian";
+         console.log("Hello from "+name);
+      }()); // end of IIFE
+
+      // >> Hello from Anthony
+      // >> Hello from Brian
+      

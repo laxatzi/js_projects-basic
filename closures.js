@@ -56,4 +56,16 @@ var calcCtoF = toFahrenheit();
 console.log(calcCtoF(30)); // 77
 console.log(calcCtoF(4)); //30.2
 
+// Example of a counter
+function counter(start){
+   let i = start;
+   return function(){
+      return i++;
+   }
+}
+
+const count = counter(10);
+console.log(count());//10
+console.log(count());//11
+console.log(count());//12
 

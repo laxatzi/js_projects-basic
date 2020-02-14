@@ -84,3 +84,5 @@ const timesThree = multiplier(3);
 console.log(timesThree(4)); // 12 -- triples every single argument  that is provided with
 
 // multiplier function is a generic abstraction that can be used to build more specific abstractions
+
+

@@ -43,4 +43,18 @@
        Function Expressions are meant to be used as IIFEs, closures and function arguments
    */
 
-   
+   // variables that are placed inside an IIFE are available while the IIFE is invoked, and no more, thus temporarily. 
+   // example:
+
+   var a = 1;
+   var b = 2; 
+   (function(){
+      var varInExpr = a;
+      a = b;
+      b = varInExpr;
+
+   }()); // end of IIFE
+
+   console.log(a); // 2
+   console.log(b) // 1
+   console.log(varInExpr); // ReferenceError: varInExpr is not defined

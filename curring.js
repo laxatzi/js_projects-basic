@@ -24,3 +24,15 @@ console.log(sixTimes(5)); // 30
 // EXERCISE
   // create a function to calculate vat tax of 24%
 
+function calcVat(vat,tax){
+  if(tax === undefined){
+     return function(x){
+        return x * vat;
+     }
+  }else {
+     return vat * tax;
+  }
+}
+
+const vat24 = calcVat(.24);
+console.log(vat24(56)); //13.44

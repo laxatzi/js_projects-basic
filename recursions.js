@@ -113,10 +113,12 @@ console.log(rangeOfNums(3,6)); //[3,4,5,6]
   function rangeOfNumbers(startNumber, endNumber){
      if(endNumber - startNumber === 0 ) return [startNumber];
      else {
-        return rangeOfNumbers(startNumber, endNumber-1).concat(endNumber);
+        const arrOfNums = rangeOfNumbers(startNumber, endNumber-1);
+        arrOfNums.push(endNumber); 
+        return arrOfNums;
      }
   }
-
+console.log(rangeOfNumbers(20,30));
 // Exercise
 /*
     We have defined a function called countdown with two params.
@@ -126,7 +128,7 @@ console.log(rangeOfNums(3,6)); //[3,4,5,6]
     [5,4,3,2,1] inside of it.
 
 */
-/*
+
 function countdown(myArray, n){
    if(n<1) return;
    else if(n === 1) return [1];
@@ -138,16 +140,8 @@ function countdown(myArray, n){
  }
 var myArr = [];
  console.log(countdown(myArr, 10));
- */
-function finalCountdown(myArr, num){
+ 
+/* 
 
-      if(num <= 0){
-        return;
-      }
-      else{
-        myArray.push(num);
-        finalCountdown(myArray, num - 1);
-      }
-   }
-   var myArr = [];
-   console.log(finalCountdown(myArr,7));
+    
+*/

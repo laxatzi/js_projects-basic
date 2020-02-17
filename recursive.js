@@ -13,4 +13,4 @@ function factorial(x){
    }
 }
 
-console.log(factorial(21)); // 120
+console.log(factorial(5)); // 

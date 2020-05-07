@@ -62,7 +62,8 @@
 
       printFarmInventory(7, 11, 3);
 
-       //Exercises
+
+  //EXERCISES
 
    {
       // Minimum
@@ -72,10 +73,10 @@
          const minOfTwo = (a,b)=> Math.min(a,b);
          console.log(minOfTwo(3,6)); // 3
          const minimumOfTwo = (a,b)=> a>b?b:a;
-         console.log(minimumOfTwo(-4, -19)); // 
+         console.log(minimumOfTwo(-4, -19)); // -19
    }    
 
-   {
+   
       // Recursion
         // We’ve seen that % (the remainder operator) can be used to test whether a number is even or odd by using % 2 to see whether it’s divisible by two. Here’s another way to define whether a positive whole number is even or odd:
 
@@ -92,7 +93,7 @@
          // console.log(isEven(75)); //
          // console.log(isEven(-1)); // 
 
-   }
+   
 // example to bear in mind
 
       // function findSolution(target) {
@@ -110,3 +111,23 @@
       // }
 
       // console.log(findSolution(24));
+
+      {
+        function isEven(n){
+         
+          if(n===0) return true;
+          else if(n===1 ) return false;
+         else if(n<0){
+           return isEven(n *= -1);
+         }
+          else {
+            return isEven(n-2);
+          }
+        }//end isEven
+        
+      //test 
+      console.log(isEven(50)); // true
+      console.log(isEven(75)); // false
+      console.log(isEven(-1)); // false
+
+      }// end block

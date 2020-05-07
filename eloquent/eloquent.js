@@ -131,3 +131,54 @@
       console.log(isEven(-1)); // false
 
       }// end block
+
+
+      //Bean Counting
+
+         // Write a function countBs that takes a string as its only argument and returns
+         // a number that indicates how many uppercase “B” characters there are in the
+         // string.
+         // Next, write a function called countChar that behaves like countBs, except
+         // it takes a second argument that indicates the character that is to be counted
+         // (rather than counting only uppercase “B” characters). Rewrite countBs to
+         // make use of this new function.
+
+  {
+  // create countBs function
+    function countBs(str){
+     const strToArr = str.split('');
+      let Bs = 0;
+      strToArr.map(elem=> { if(elem === 'B')Bs += 1;});
+      return Bs;
+    }// end countBs
+
+// create countChar function 
+  function countChar(str, char){
+   const strToArr = str.split('');
+   let numOfChars = 0;
+   strToArr.map(elem=> {
+     elem = elem.toLowerCase();
+     if(elem === char){
+       numOfChars += 1;
+     }
+   });
+   return numOfChars;
+  }// end of countChar
+
+  // Rewrite countBs to make use of this new function.
+
+  function countAllBs(str, char, charCap){
+    const strToArr = str.split('');
+      let numOfChars = 0;
+      strToArr.map(elem=> {
+        
+        if(elem === char || elem===charCap){
+          numOfChars += 1;
+        }
+      });
+      return numOfChars;
+  }
+    console.log(countBs("Bombing Babe!"));
+    console.log(countChar('Anasa', 'a'));
+    console.log(countAllBs('The evaluation is BBB brother!', 'b', 'B'));
+  }// end block

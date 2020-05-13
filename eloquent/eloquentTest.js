@@ -23,9 +23,20 @@
          // console.log(isEven(50)); //
          // console.log(isEven(75)); //
          // console.log(isEven(-1)); // 
+     
+{
+        function isEven(num){
+               if(num === 1)return false;
+               else if(num === 0) return true;
+               else if(num < 0) return isEven(num *= -1);
+               return isEven(num-2);
+        }
+          console.log(isEven(50)); //
+          console.log(isEven(75)); //
+          console.log(isEven(-5)); //
+}//end of block
 
-
-//Bean Counting
+//Letter Counting
 
          // Write a function countBs that takes a string as its only argument and returns
          // a number that indicates how many uppercase “B” characters there are in the

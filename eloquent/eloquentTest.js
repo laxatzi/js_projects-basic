@@ -1,6 +1,12 @@
  // Minimum
         // Write a function min that takes two arguments and returns their minimum.
         // use an alternative to Math.min method
+
+        {
+           const minArg = (a,b)=> a > b? b : a;
+           console.log(minArg(45, 76)); // 45
+
+        }// end block
  
  // Recursion
         // We’ve seen that % (the remainder operator) can be used to test whether a number is even or odd by using % 2 to see whether it’s divisible by two. Here’s another way to define whether a positive whole number is even or odd:
@@ -28,5 +34,13 @@
          // it takes a second argument that indicates the character that is to be counted
          // (rather than counting only uppercase “B” characters). Rewrite countBs to
          // make use of this new function.
+
+         {
+              function countBs(str){
+                   return str.split("").filter(elem => elem==='B').reduce(elem => elem += 1 ,0); 
+             }
+
+              console.log(countBs('ABB Electrical Equipment'));
+         }// end of block
 
          

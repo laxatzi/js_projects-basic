@@ -55,6 +55,12 @@
               const countChar = (str, char) => str.toLowerCase().split("").filter(elem => elem === char).reduce(elem => elem+= 1, 0);
         // TEST
               console.log(countChar('Serres', 's'));
+
+ //countLowerAndUperCases function
+     const countLowerAndUpperCases = (str, char, charCap) => str.split('')
+     .filter(elem => elem === char || elem === charCap).reduce(elem => elem += 1, 0);
+      //TEST
+     console.log(countLowerAndUpperCases('Serres', 's', 'S')); 
               
 }// end of block
 

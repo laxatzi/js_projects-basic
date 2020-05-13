@@ -117,12 +117,8 @@
          
           if(n===0) return true;
           else if(n===1 ) return false;
-         else if(n<0){
-           return isEven(n *= -1);
-         }
-          else {
-            return isEven(n-2);
-          }
+          else if(n<0) return isEven(n *= -1);
+         return isEven(n-2);
         }//end isEven
         
       //test 
@@ -144,40 +140,34 @@
          // make use of this new function.
 
   {
+
   // create countBs function
-    function countBs(str){
-     const strToArr = str.split('');
-      let Bs = 0;
-      strToArr.map(elem=> { if(elem === 'B')Bs += 1;});
-      return Bs;
-    }// end countBs
+ 
+   const countBs = str => str.split("").filter(elem => elem === 'B').reduce(elem => elem += 1, 0);
+   //TEST
+   console.log(countBs('ABB Electrical Equipment'));
 
 // create countChar function 
-  function countChar(str, char){
-   const strToArr = str.split('');
-   let numOfChars = 0;
-   strToArr.map(elem=> {
-     elem = elem.toLowerCase();
-     if(elem === char){
-       numOfChars += 1;
-     }
-   });
-   return numOfChars;
-  }// end of countChar
+    const countChar = (str, char) => str.toLowerCase().split("").filter(elem => elem === char).reduce(elem => elem+= 1, 0);
+        // TEST
+              console.log(countChar('Serres', 's'));
 
   // Rewrite countBs to make use of this new function.
 
-  function countAllBs(str, char, charCap){
-    const strToArr = str.split('');
-      let numOfChars = 0;
-      strToArr.map(elem=> {
+  // function countAllBs(str, char, charCap){
+  //   const strToArr = str.split('');
+  //     let numOfChars = 0;
+  //     strToArr.map(elem=> {
         
-        if(elem === char || elem===charCap){
-          numOfChars += 1;
-        }
-      });
-      return numOfChars;
-  }
+  //       if(elem === char || elem===charCap){
+  //         numOfChars += 1;
+  //       }
+  //     });
+  //     return numOfChars;
+  // }
+
+  const countAllBs = (str, char, charCap) => str.split('').filter(elem => elem === char || elem === charCap).reduce(elem => elem += 1, 0); 
+  
     console.log(countBs("Bombing Babe!"));
     console.log(countChar('Anasa', 'a'));
     console.log(countAllBs('The evaluation is BBB brother!', 'b', 'B'));

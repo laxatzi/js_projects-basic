@@ -32,15 +32,19 @@
          // string.
          // Next, write a function called countChar that behaves like countBs, except
          // it takes a second argument that indicates the character that is to be counted
-         // (rather than counting only uppercase “B” characters). Rewrite countBs to
-         // make use of this new function.
+         // (rather than counting only uppercase “B” characters).
 
-         {
-              function countBs(str){
-                   return str.split("").filter(elem => elem==='B').reduce(elem => elem += 1 ,0); 
-             }
-
+{
+  //countBs function
+              const countBs = str => str.split("").filter(elem => elem === 'B').reduce(elem => elem += 1, 0);
+              //TEST
               console.log(countBs('ABB Electrical Equipment'));
-         }// end of block
+
+  //countChar function
+              const countChar = (str, char) => str.toLowerCase().split("").filter(elem => elem === char).reduce(elem => elem+= 1, 0);
+        // TEST
+              console.log(countChar('Serres', 's'));
+              
+}// end of block
 
          

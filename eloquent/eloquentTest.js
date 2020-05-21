@@ -20,18 +20,10 @@
       return arr.reduce((el, sum)=> el + sum);
    }
  
-   function rangeStep(start, end, step){
-      let arr = [start];
-      if(start >= end){ return start};
-      return rangeStep(start+1, end,step)
-         function range1(start,end){
-            return arr.concat(range1(start + step, end));
-         
-      }
-   }
+   
    console.log(range(2,19)); // [3, 4, 5, 6, 7, 8, 9]
    console.log(sum([1,2,4,3])); // 10
-   console.log(rangeStep(1, 10, 2)); // [1, 3, 5, 7, 9]
+   //console.log(rangeStep(1, 10, 2)); // [1, 3, 5, 7, 9]
   // console.log(rangeStep(5, 2, -1)); // [5,4,3,2]
   console.log(sum(range(1, 10))); // 55
 

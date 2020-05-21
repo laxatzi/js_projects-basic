@@ -49,24 +49,39 @@
     //. The first takes an array as argument and produces a new array that has the same elements in the inverse order.
     //. The second does what the reverse method does: it modifies the array given as argument by reversing its elements. 
     //. Do not use the standard reverse() method.
-     // my arrays
-    let arrayNum = [1,2,3,4,5];
-    let anotherArrayNum = [6,7,8,9,10];
-   //my functions
-    function reverseArray(arr){
-      let newArray =  arr.slice().sort((a,b)=> b-a);
-      return newArray;
-    }
+// my ordered arrays
+       let arrayNum = [1,2,3,4,5];
+       let anotherArrayNum = [6,7,8,9,10];
+// my non-ordered arrays
+       let namesArr = ['Lambros', 'Antonis', 'Kassandra', 'Diogenis'];
+       let anotherNamesArr = ['Stella', 'Vicky', 'Antonia'];
  
-    function reverseArrayInPlace(arr){
-      return arr.sort((a,b)=> b-a);
-    }
-    //test
-   console.log(reverseArray(arrayNum)); 
-   console.log(arrayNum);
-   console.log(reverseArrayInPlace(anotherArrayNum));
-   console.log(anotherArrayNum);
+//my functions for ordered arrays
+       function reverseArrayOrd(arr){
+         let newArray =  arr.slice().sort((a,b)=> b-a);
+         return newArray;
+       }
+ 
+       function reverseArrayOrdInPlace(arr){
+         return arr.sort((a,b)=> b-a);
+       }
 
+//my functions for non-ordered arrays
+        function reverseArray(arr)    {
+          return arr.map((el, index)=> arr[arr.length-1-index]);
+        }
+        // function missing
+
+//test
+// ordered
+       // console.log(reverseArrayOrd(arrayNum)); // 
+       // console.log(arrayNum);
+       // console.log(reverseArrayOrdInPlace(anotherArrayNum));
+       // console.log(anotherArrayNum);
+// non-ordered
+        console.log(reverseArray(namesArr));
+        console.log(namesArr);
+       //? use concat and splice to mutate the reverse anotherNamesArr
+       // console.log(reverseArrayInPlace(anotherNamesArr));
+       // console.log(anotherNamesArr);
  }//block
- 
-

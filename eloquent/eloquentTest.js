@@ -40,3 +40,33 @@
     
    //      console.log(factorial(6)); // 720
    //  }());//end wrapper iife
+
+
+//.Reversing an Array
+{
+   //.Arrays have a reverse method that changes the array by inverting the order of its elements.
+    //. Write two functions 'reverseArray' and 'reverseArrayInPlace'.
+    //. The first takes an array as argument and produces a new array that has the same elements in the inverse order.
+    //. The second does what the reverse method does: it modifies the array given as argument by reversing its elements. 
+    //. Do not use the standard reverse() method.
+     // my arrays
+    let arrayNum = [1,2,3,4,5];
+    let anotherArrayNum = [6,7,8,9,10];
+   //my functions
+    function reverseArray(arr){
+      let newArray =  arr.slice().sort((a,b)=> b-a);
+      return newArray;
+    }
+ 
+    function reverseArrayInPlace(arr){
+      return arr.sort((a,b)=> b-a);
+    }
+    //test
+   console.log(reverseArray(arrayNum)); 
+   console.log(arrayNum);
+   console.log(reverseArrayInPlace(anotherArrayNum));
+   console.log(anotherArrayNum);
+
+ }//block
+ 
+

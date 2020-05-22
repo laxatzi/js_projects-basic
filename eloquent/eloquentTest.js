@@ -61,10 +61,16 @@
             }
       
 //[...el] clones the array, .map(el.pop, el) pops the array (returns the last element of the array) and push it to a new array, which results in a reversed array.and the 2nd argument to map makes sure that pop is executed with el as this, like as if you would have done el.pop() 
-           function reverseArrayInPlace(el){
-             return [...el].map(el.pop, el); //? why the second arg?*
+           function reverseArrayInPlace(arr){
+             return [...arr].map(arr.pop, arr); //? why the second arg?*
            }
       //? *When you pass on a function reference (so without executing it), which is later used for execution, then that function reference has no trace at all of the object you want to have it executed on: it is just a plain function. In the above code you might as well have put [].pop instead of a.pop: it would be exactly the same function. When the implementation of map executes that function, it does not know on which array it should be executed. And if you don't tell that, it will fail. The second argument to map gives the necessary info to map.
+
+//*The below function is similar with the reverseArrayInPlace function but without mutating original array
+//*find out why
+              //  function reverseArrayInPlace(arr){
+              //        return arr.map(arr.pop, [...arr]);
+              // }
 
 //test
             console.log("This is the reversed array: " + reverseArray(namesArr));

@@ -26,7 +26,7 @@
    //console.log(rangeStep(1, 10, 2)); // [1, 3, 5, 7, 9]
   // console.log(rangeStep(5, 2, -1)); // [5,4,3,2]
   console.log(sum(range(1, 10))); // 55
-
+  console.log('end of "sum of range" exercise');
  }// end block
 
    // (function(){
@@ -44,44 +44,33 @@
 
 //.Reversing an Array
 {
-   //.Arrays have a reverse method that changes the array by inverting the order of its elements.
-    //. Write two functions 'reverseArray' and 'reverseArrayInPlace'.
-    //. The first takes an array as argument and produces a new array that has the same elements in the inverse order.
-    //. The second does what the reverse method does: it modifies the array given as argument by reversing its elements. 
-    //. Do not use the standard reverse() method.
-// my ordered arrays
-       let arrayNum = [1,2,3,4,5];
-       let anotherArrayNum = [6,7,8,9,10];
-// my non-ordered arrays
-       let namesArr = ['Lambros', 'Antonis', 'Kassandra', 'Diogenis'];
-       let anotherNamesArr = ['Stella', 'Vicky', 'Antonia'];
- 
-//my functions for ordered arrays
-       function reverseArrayOrd(arr){
-         let newArray =  arr.slice().sort((a,b)=> b-a);
-         return newArray;
-       }
- 
-       function reverseArrayOrdInPlace(arr){
-         return arr.sort((a,b)=> b-a);
-       }
-
-//my functions for non-ordered arrays
-        function reverseArray(arr)    {
-          return arr.map((el, index)=> arr[arr.length-1-index]);
-        }
-        // function missing
-
+       //.Arrays have a reverse method that changes the array by inverting the order of its elements.
+        //. Write two functions 'reverseArray' and 'reverseArrayInPlace'.
+        //. The first takes an array as argument and produces a new array that has the same elements in the inverse order.
+        //. The second does what the reverse method does: it modifies the array given as argument by reversing its elements. 
+        //. Do not use the standard reverse() method.
+// my arrays
+           let arrayNum = [1,2,3,4,5];
+           let namesArr = ['Lambros', 'Antonis', 'Kassandra', 'Diogenis'];
+           let anotherNamesArr = ['Stella', 'Vicky', 'Antonia'];
+     
+//my functions 
+            function reverseArray(arr)    {
+              return arr.map((el, index)=> arr[arr.length-1-index]); // algorith to reverse index order
+            }
+      
+           function reverseArrayInPlace(el){
+             return [...el].map(el.pop, el);
+           }
 //test
-// ordered
-       // console.log(reverseArrayOrd(arrayNum)); // 
-       // console.log(arrayNum);
-       // console.log(reverseArrayOrdInPlace(anotherArrayNum));
-       // console.log(anotherArrayNum);
-// non-ordered
-        console.log(reverseArray(namesArr));
-        console.log(namesArr);
-       //? use concat and splice to mutate the reverse anotherNamesArr
-       // console.log(reverseArrayInPlace(anotherNamesArr));
-       // console.log(anotherNamesArr);
- }//block
+            console.log(reverseArray(namesArr));
+            console.log(reverseArray(arrayNum))
+            console.log(namesArr);
+            console.log(arrayNum);
+            console.log(anotherNamesArr);
+            console.log(reverseArrayInPlace(anotherNamesArr));
+            console.log(anotherNamesArr);
+            console.log('end of "reversing array" exercise');
+
+     }//block
+     

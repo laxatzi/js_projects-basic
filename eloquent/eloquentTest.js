@@ -26,7 +26,7 @@
    //console.log(rangeStep(1, 10, 2)); // [1, 3, 5, 7, 9]
   // console.log(rangeStep(5, 2, -1)); // [5,4,3,2]
   console.log(sum(range(1, 10))); // 55
-  console.log('end of "sum of range" exercise');
+  console.log('END of "sum of range" exercise');
  }// end block
 
    // (function(){
@@ -53,24 +53,28 @@
            let arrayNum = [1,2,3,4,5];
            let namesArr = ['Lambros', 'Antonis', 'Kassandra', 'Diogenis'];
            let anotherNamesArr = ['Stella', 'Vicky', 'Antonia'];
+           let petsArr = ['dog', 'cat', 'canary'];
      
 //my functions 
             function reverseArray(arr)    {
               return arr.map((el, index)=> arr[arr.length-1-index]); // algorith to reverse index order
             }
       
+//[...el] clones the array, .map(el.pop, el) pops the array (returns the last element of the array) and push it to a new array, which results in a reversed array.and the 2nd argument to map makes sure that pop is executed with el as this, like as if you would have done el.pop() 
            function reverseArrayInPlace(el){
-             return [...el].map(el.pop, el);
+             return [...el].map(el.pop, el); //? why the second arg?*
            }
+      //? *When you pass on a function reference (so without executing it), which is later used for execution, then that function reference has no trace at all of the object you want to have it executed on: it is just a plain function. In the above code you might as well have put [].pop instead of a.pop: it would be exactly the same function. When the implementation of map executes that function, it does not know on which array it should be executed. And if you don't tell that, it will fail. The second argument to map gives the necessary info to map.
+
 //test
-            console.log(reverseArray(namesArr));
-            console.log(reverseArray(arrayNum))
-            console.log(namesArr);
-            console.log(arrayNum);
-            console.log(anotherNamesArr);
-            console.log(reverseArrayInPlace(anotherNamesArr));
-            console.log(anotherNamesArr);
-            console.log('end of "reversing array" exercise');
+            console.log("This is the reversed array: " + reverseArray(namesArr));
+            console.log("This is the reversed array: " + reverseArray( arrayNum));
+            console.log("This is the original array: " + namesArr);
+            console.log("This is the original array: " + arrayNum);
+            console.log("This is the original array: " + anotherNamesArr);
+            console.log("This is the reversed in place array: " + reverseArrayInPlace(anotherNamesArr));
+            console.log("This is the original array after function being called: (array empty because of pop mutating it)" + anotherNamesArr);
+            console.log('END of "reversing array" exercise');
 
      }//block
      
